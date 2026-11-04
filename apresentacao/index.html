@@ -158,265 +158,265 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
 #wipe .wr{position:absolute;top:0;bottom:0;width:120px;background:var(--red);right:0}
 #wipe.rev .wr{right:auto;left:0}
 @media (prefers-reduced-motion:reduce){.r,.ch,.fb,.sec .ghost{transition:none!important}}
+
+.stat{padding:14px 18px}.stat .num{font-size:44px}
+.pbars{display:flex;flex-direction:column;gap:12px}
+.pb{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center;font-size:15px}
+.pb .bar{height:34px;background:var(--g5);position:relative}
+.pb .bar i{display:flex;align-items:center;justify-content:flex-end;padding-right:12px;height:100%;width:0;background:#6b6b6b;font:800 22px var(--disp);letter-spacing:.03em;transition:width 1.1s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*110ms + 500ms)}
+.on .pb .bar i{width:var(--w)}
+.pb.me .bar i{background:var(--red)}
+.pb.me{font-weight:700}
+.tsm{display:grid;grid-template-columns:420px 1fr;gap:34px;align-items:center}
+.rings{position:relative;width:420px;height:390px}
+.rg{position:absolute;left:50%;bottom:0;border-radius:50%;transform:translateX(-50%) scale(.6);opacity:0;display:flex;justify-content:center;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .6s;transition-delay:calc(var(--d,0)*220ms + 300ms)}
+.on .rg{transform:translateX(-50%) scale(1);opacity:1}
+.rg span{font:800 30px var(--disp);letter-spacing:.04em;padding-top:14px}
+.rg.ra{width:390px;height:390px;background:#1d1d1d;border:1px solid #3a3a3a}
+.rg.rb{width:250px;height:250px;background:#7a0000;border:1px solid #a00000}
+.rg.rc3{width:110px;height:110px;background:var(--red);align-items:center}.rg.rc3 span{padding:0;color:#fff}
+.tr{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--bd);align-items:start}
+.tr:last-of-type{border-bottom:0}
+.tr .k{font:800 40px/1 var(--disp);color:var(--redt)}
+.tr .v{font:800 34px/1 var(--disp);color:#fff}
+.tr .d{font-size:15px;color:#bdbdbd;line-height:1.4;margin-top:4px}
+.note{font-size:13.5px;line-height:1.45;color:#9a9a9a;max-width:1000px}
+.prof .h{font:800 30px/1 var(--disp);text-transform:uppercase}
+.prof .g{font-weight:700;font-size:17px;color:var(--redt);line-height:1.3}
+.prof ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.prof li{font-size:15.5px;line-height:1.4;color:#cfcfcf;padding-left:14px;position:relative}
+.prof li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--red)}
+.pk .tk{font:800 56px/1 var(--disp);color:#fff}
+.pk .it{font:500 12px var(--mono);letter-spacing:.14em;color:var(--redt);text-transform:uppercase}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.chart{display:flex;align-items:flex-end;gap:8px;height:230px;padding-top:22px;border-bottom:1px solid #444}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;position:relative;min-width:0}
+.col .a,.col .b{width:100%;height:0;transition:height 1s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*70ms + 500ms)}
+.col .a{background:#d9d9d9}.col .b{background:var(--red)}
+.on .col .a{height:var(--ha)}.on .col .b{height:var(--hb)}
+.col em{position:absolute;left:0;right:0;font:500 11px var(--mono);text-align:center;color:#ddd;font-style:normal;bottom:calc(var(--ha) + var(--hb) + 4px);opacity:0;transition:opacity .5s;transition-delay:calc(var(--i)*70ms + 1300ms)}
+.on .col em{opacity:1}
+.xl{display:flex;gap:8px;margin-top:6px}.xl span{flex:1;text-align:center;font:500 11px var(--mono);color:#9a9a9a}
+.lg{display:flex;gap:18px;font:500 12px var(--mono);letter-spacing:.08em;color:#bbb;text-transform:uppercase;margin-bottom:6px}
+.lg i{display:inline-block;width:10px;height:10px;margin-right:6px}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.team .card{padding:16px 18px}
+.team .h{font:800 26px/1 var(--disp);text-transform:uppercase}
+.inv{background:var(--red);color:#fff;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.inv .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:10px;font-size:16px}
+.inv .row b{font:800 34px/1 var(--disp);letter-spacing:.02em;white-space:nowrap}
+.inv .row small{display:block;font-size:13px;opacity:.85;margin-top:3px}
+.inv .tot{font-size:15px;line-height:1.45}
 </style>
 </head>
 <body>
 <div id="stage">
-
 <!-- 1 CAPA -->
 <section class="slide dk cover" data-t="Capa" data-s="Aroma das Ervas">
  <canvas id="speed"></canvas>
  <div class="hero"><div class="kick r" style="--d:0;margin-bottom:22px">Plano comercial · Novembro de 2026</div>
   <h1 class="split">Prospecção<br>B2B <em>ativa</em></h1>
-  <p class="r" style="--d:8">Como colocar a Aroma das Ervas em empórios e mercados de alto padrão de São Paulo, com geração e qualificação de leads por IA-SDR.</p></div>
+  <p class="r" style="--d:8">Como colocar a Aroma das Ervas em empórios e mercados de alto padrão de São Paulo, com tráfego pago e IA-SDR.</p></div>
  <div class="hint">Use as setas do teclado ou clique em avançar</div>
 </section>
 
 <!-- 2 AGENDA -->
 <section class="slide lt" data-t="Agenda" data-s="Agenda">
  <div class="c"><div class="kick r" style="--d:0">Agenda</div><h2 class="t r" style="--d:1">O que vamos percorrer</h2>
- <div class="main"><div class="grid g2" style="gap:0 48px">
-  <div class="card r" style="--d:2"><div class="lab">01</div><div class="h" style="font-size:24px;font-family:var(--disp);text-transform:uppercase">Contexto da marca</div><p>Onde a Aroma está e qual é o gargalo comercial.</p></div>
-  <div class="card r" style="--d:3"><div class="lab">02</div><div class="h" style="font-size:24px;font-family:var(--disp);text-transform:uppercase">Mercado</div><p>Tamanho da categoria e concorrentes diretos.</p></div>
-  <div class="card r" style="--d:4"><div class="lab">03</div><div class="h" style="font-size:24px;font-family:var(--disp);text-transform:uppercase">Oportunidade B2B</div><p>Universo de lojas e o modelo IA-SDR.</p></div>
-  <div class="card r" style="--d:5"><div class="lab">04</div><div class="h" style="font-size:24px;font-family:var(--disp);text-transform:uppercase">Projeção</div><p>Benchmark real e simulador interativo.</p></div>
-  <div class="card r" style="--d:6"><div class="lab">05</div><div class="h" style="font-size:24px;font-family:var(--disp);text-transform:uppercase">Proposta</div><p>Piloto de 90 dias e próximos passos.</p></div>
- </div></div>
- <div class="cc r" style="--d:7"><b>Conclusão estratégica</b><p>A apresentação termina em uma decisão: aprovar um piloto de 90 dias com critérios claros para escalar.</p></div></div>
+ <div class="main"><div class="grid g2" style="gap:14px 48px">
+  <div class="card r" style="--d:2"><div class="lab">01</div><div class="h" style="font:800 28px var(--disp);text-transform:uppercase">Marca e mercado</div><p>Ponto de partida e comparação com os concorrentes.</p></div>
+  <div class="card r" style="--d:3"><div class="lab">02</div><div class="h" style="font:800 28px var(--disp);text-transform:uppercase">Oportunidade B2B</div><p>TAM, SAM e SOM, perfis de loja, pacotes e o modelo IA-SDR.</p></div>
+  <div class="card r" style="--d:4"><div class="lab">03</div><div class="h" style="font:800 28px var(--disp);text-transform:uppercase">Projeção</div><p>Resultado do primeiro mês e projeção de recompra.</p></div>
+  <div class="card r" style="--d:5"><div class="lab">04</div><div class="h" style="font:800 28px var(--disp);text-transform:uppercase">Proposta</div><p>Primeiro mês, time de performance e investimento.</p></div>
+ </div></div></div>
 </section>
 
 <!-- 3 SEC 01 -->
-<section class="slide dk sec" data-t="01 Contexto da marca" data-s="01 Contexto"><div class="ghost">01</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 01</div><h1 class="split">Contexto<br>da marca</h1></div></section>
+<section class="slide dk sec" data-t="01 Marca e mercado" data-s="01 Marca e mercado"><div class="ghost">01</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 01</div><h1 class="split">Marca<br>e mercado</h1></div></section>
 
-<!-- 4 ONDE ESTÁ -->
-<section class="slide dk" data-t="Onde a marca está hoje" data-s="01 Contexto">
- <div class="c"><div class="kick r" style="--d:0">01 Contexto da marca</div><h2 class="t r" style="--d:1">Uma indústria de 25 anos com <em>espaço para crescer</em></h2>
+<!-- 4 CONTEXTO -->
+<section class="slide dk" data-t="Contexto da marca" data-s="01 Marca e mercado">
+ <div class="c"><div class="kick r" style="--d:0">01 Marca e mercado</div><h2 class="t r" style="--d:1">Uma indústria de 25 anos que precisa de <em>prospecção direta</em></h2>
  <div class="main"><div class="grid g4">
-  <div class="card r" style="--d:2"><div class="lab">Faturamento</div><div class="num rd">R$ 1,3 a 1,4 mi</div><div class="h">por mês</div><p>Cerca de R$ 15 milhões por ano. Meta de 2027: crescer de 17% a 20%.</p></div>
+  <div class="card r" style="--d:2"><div class="lab">Faturamento</div><div class="num rd" style="font-size:52px">R$ 1,3 a 1,4 mi</div><div class="h">por mês</div><p>Meta de 2027: crescer de 17% a 20%.</p></div>
   <div class="card r" style="--d:3"><div class="lab">Carteira</div><div class="num rd" data-c="413">413</div><div class="h">clientes pessoa jurídica</div><p>Em 12 estados, com redes como Oba e Shibata.</p></div>
-  <div class="card r" style="--d:4"><div class="lab">Portfólio</div><div class="num rd" data-c="130">130</div><div class="h">itens em sachê e frasco</div><p>A loja expõe de 20 a 30. O foco comercial são as misturas.</p></div>
-  <div class="card r" style="--d:5"><div class="lab">Participação em SP</div><div class="num rd" data-c="0.9" data-d="1" data-s="%">0,9%</div><div class="h">no estado de São Paulo</div><p>41% nos clientes atendidos. 17º entre os 20 maiores do estado.</p></div>
- </div><span class="tag r" style="--d:6">// Fato observado · reunião de 28 de outubro</span></div>
- <div class="cc r" style="--d:7"><b>Conclusão estratégica</b><p>A marca converte onde está presente. O limite do crescimento é a quantidade de lojas que a vendem.</p></div></div>
+  <div class="card r" style="--d:4"><div class="lab">Vendas</div><div class="num rd" data-c="90" data-s="%">90%</div><div class="h">da carteira com 15 representantes</div><p>O cliente é do representante, não da empresa.</p></div>
+  <div class="card r" style="--d:5"><div class="lab">Participação em SP</div><div class="num rd" data-c="0.9" data-d="1" data-s="%">0,9%</div><div class="h">no estado de São Paulo</div><p>41% nos clientes que já compram.</p></div>
+ </div>
+ <div class="card r" style="--d:6"><div class="lab">Próximo passo da diretoria</div><p style="font-size:18px;color:#e6e6e6">Montar um comercial interno para prospecção direta e um representante dedicado a São Paulo. No digital, a Amazon começou em março e cerca de R$ 730 em anúncios geraram cerca de R$ 2.700 em vendas.</p></div></div></div>
 </section>
 
-<!-- 5 GARGALO -->
-<section class="slide dk" data-t="Gargalo comercial" data-s="01 Contexto">
- <div class="c"><div class="kick r" style="--d:0">01 Contexto da marca</div><h2 class="t r" style="--d:1">O gargalo é <em>comercial</em>, não de produto</h2>
- <div class="main"><div class="grid g3">
-  <div class="card r" style="--d:2"><div class="num rd" style="font-size:54px">90%</div><div class="h">da carteira está com representantes</div><p>15 representantes. O cliente é da carteira deles, não da empresa.</p></div>
-  <div class="card r" style="--d:3"><div class="num rd" style="font-size:54px">0</div><div class="h">rotina de acompanhamento</div><p>Sem reunião periódica, treinamento padrão ou processo comum de venda.</p></div>
-  <div class="card r" style="--d:4"><div class="num rd" style="font-size:54px">Piloto</div><div class="h">automático nas redes recorrentes</div><p>A Aroma perde espaço para outras linhas do mesmo representante.</p></div>
-  <div class="card r" style="--d:5"><div class="num rd" style="font-size:54px">3,7x</div><div class="h">retorno inicial na Amazon</div><p>Cerca de R$ 730 em anúncios geraram cerca de R$ 2.700 em vendas. Operação desde março.</p></div>
-  <div class="card r" style="--d:6"><div class="num rd" style="font-size:54px">Ponto</div><div class="h">de venda antes da comunidade</div><p>Divulgar sem produto disponível não converte. A direção quer presença física primeiro.</p></div>
-  <div class="card r" style="--d:7"><div class="num rd" style="font-size:54px">+1</div><div class="h">comercial interno já planejado</div><p>Prospecção direta e um representante dedicado a São Paulo.</p></div>
- </div><span class="tag r" style="--d:8">// Fato observado · informado pela diretoria</span></div>
- <div class="cc r" style="--d:9"><b>Conclusão estratégica</b><p>Falta um motor de geração de oportunidades para o comercial interno. É o papel da IA-SDR.</p></div></div>
-</section>
-
-<!-- 6 POSICIONAMENTO -->
-<section class="slide lt" data-t="Posicionamento premium" data-s="01 Contexto">
- <div class="c"><div class="kick r" style="--d:0">01 Contexto da marca</div><h2 class="t r" style="--d:1">Acima da liderança, com <em>preço abaixo dos pares</em></h2>
- <p class="s r" style="--d:2">A marca atende as classes A e B e disputa com BR Spices e Bombay Herbs.</p>
- <div class="main"><table class="r" style="--d:3">
-  <tr><th>Marca</th><th class="n">Preço médio por unidade</th><th>Leitura</th></tr>
-  <tr><td>BR Spices</td><td class="n">R$ 18,20</td><td>Par direto. Adquirida por grupo maior, com mais fôlego de negociação.</td></tr>
-  <tr><td>Bombay Herbs</td><td class="n">R$ 15,70</td><td>Par direto de perfil.</td></tr>
-  <tr class="hl"><td>Aroma das Ervas</td><td class="n">Abaixo dos dois</td><td>Espaço para capturar valor com embalagem, mix e comunicação.</td></tr>
- </table>
- <div class="grid g2"><div class="card r" style="--d:4"><div class="lab">Ponto de atenção</div><p>Concorrentes já usam fecho zip. A Aroma está em transição, e a falta do fecho pode pesar na decisão de compra.</p></div>
- <div class="card r" style="--d:5"><div class="lab">Ponto forte</div><p>Produção semimanual e ingredientes inteiros, como o louro em folha, sustentam o posicionamento de qualidade.</p></div></div></div>
- <div class="cc r" style="--d:6"><b>Conclusão estratégica</b><p>O alvo são lojas de alto padrão, onde o consumidor compara qualidade antes de preço.</p></div></div>
-</section>
-
-<!-- 7 SEC 02 -->
-<section class="slide dk sec" data-t="02 Mercado" data-s="02 Mercado"><div class="ghost">02</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 02</div><h1 class="split">Mercado</h1></div></section>
-
-<!-- 8 MERCADO -->
-<section class="slide dk" data-t="Tamanho do mercado" data-s="02 Mercado">
- <div class="c"><div class="kick r" style="--d:0">02 Mercado</div><h2 class="t r" style="--d:1">Categoria estável, <em>canal pulverizado</em></h2>
+<!-- 5 MERCADO E CONCORRENTES -->
+<section class="slide dk" data-t="Mercado e concorrentes" data-s="01 Marca e mercado">
+ <div class="c"><div class="kick r" style="--d:0">01 Marca e mercado</div><h2 class="t r" style="--d:1">Mercado e concorrentes em <em>uma leitura</em></h2>
  <div class="main"><div class="grid g4">
-  <div class="card r" style="--d:2"><div class="lab">Crescimento</div><div class="num rd" data-c="4.61" data-d="2" data-s="%">4,61%</div><div class="h">ao ano até 2028</div><p>Temperos e especiarias. Kantar, via Sebrae-PR.</p></div>
-  <div class="card r" style="--d:3"><div class="lab">Empresas</div><div class="num rd" data-c="5245">5.245</div><div class="h">ativas no setor</div><p>Mercado fragmentado. Sebrae-PR.</p></div>
-  <div class="card r" style="--d:4"><div class="lab">Canal</div><div class="num rd">416 mil</div><div class="h">mercearias no Brasil</div><p>Maior canal em pontos de venda. Mercado &amp; Consumo, 2025.</p></div>
-  <div class="card r" style="--d:5"><div class="lab">Capital paulista</div><div class="num rd" data-c="13648">13.648</div><div class="h">mercados e mercearias</div><p>11.251 minimercados e 2.397 supermercados. IBGE, 2024.</p></div>
- </div></div>
- <div class="cc r" style="--d:6"><b>Conclusão estratégica</b><p>Não há número público confiável do faturamento só de temperos. O dimensionamento correto é por lojas alcançáveis.</p></div></div>
+  <div class="card stat r" style="--d:2"><div class="lab">Crescimento ao ano</div><div class="num rd" data-c="4.61" data-d="2" data-s="%">4,61%</div></div>
+  <div class="card stat r" style="--d:3"><div class="lab">Empresas no setor</div><div class="num rd" data-c="5245">5.245</div></div>
+  <div class="card stat r" style="--d:4"><div class="lab">Mercearias no Brasil</div><div class="num rd">416 mil</div></div>
+  <div class="card stat r" style="--d:5"><div class="lab">Lojas na capital</div><div class="num rd" data-c="13648">13.648</div></div>
+ </div>
+ <div class="two">
+  <div class="r" style="--d:6"><div class="lab" style="margin-bottom:10px">Preço médio por unidade</div>
+   <div class="pbars">
+    <div class="pb"><span>BR Spices</span><div class="bar"><i style="--w:100%;--d:0">R$ 18,20</i></div></div>
+    <div class="pb"><span>Bombay Herbs</span><div class="bar"><i style="--w:86%;--d:1">R$ 15,70</i></div></div>
+    <div class="pb me"><span>Aroma das Ervas</span><div class="bar"><i style="--w:57%;--d:2">R$ 10,30</i></div></div>
+   </div>
+   <p class="note" style="margin-top:10px">A Aroma está 43% abaixo da BR Spices e 34% abaixo da Bombay Herbs, pares de perfil premium.</p></div>
+  <div class="r" style="--d:7"><div class="lab" style="margin-bottom:10px">Quem mais disputa a gôndola</div>
+   <div class="grid" style="gap:8px">
+    <div class="card" style="padding:12px 16px"><div class="h" style="font-size:16px">Sazón e Kitano</div><p style="font-size:14.5px">Líderes de massa. Sazón está em 64% dos lares.</p></div>
+    <div class="card" style="padding:12px 16px"><div class="h" style="font-size:16px">Cepêra</div><p style="font-size:14.5px">Cerca de 80 anos e 150 itens, varejo e foodservice.</p></div>
+    <div class="card" style="padding:12px 16px"><div class="h" style="font-size:16px">Temperatta</div><p style="font-size:14.5px">Mais de R$ 30 milhões em 2025, forte em marca própria.</p></div>
+   </div></div>
+ </div></div></div>
 </section>
 
-<!-- 9 CONCORRENTES -->
-<section class="slide lt" data-t="Concorrentes" data-s="02 Mercado">
- <div class="c"><div class="kick r" style="--d:0">02 Mercado</div><h2 class="t r" style="--d:1">Quem disputa a gôndola e <em>onde há espaço</em></h2>
- <div class="main"><table class="r" style="--d:2">
-  <tr><th>Marca</th><th>Posição</th><th>Implicação</th></tr>
-  <tr><td>Sazón e Kitano</td><td>Líderes de massa. Sazón está em 64% dos lares.</td><td>Referência de volume. Disputa gôndola em supermercados grandes.</td></tr>
-  <tr class="hl"><td>BR Spices e Bombay Herbs</td><td>Pares de perfil premium, com preço médio maior.</td><td>Concorrente direto em empórios e mercados de alto padrão.</td></tr>
-  <tr><td>Cepêra</td><td>Cerca de 80 anos e 150 itens, varejo e foodservice.</td><td>Amplitude de linha parecida com a da Aroma.</td></tr>
-  <tr><td>Temperatta</td><td>Mais de R$ 30 milhões em 2025, forte em marca própria.</td><td>O varejo regional compra de fornecedor médio.</td></tr>
- </table></div>
- <div class="cc r" style="--d:3"><b>Conclusão estratégica</b><p>A Aroma ganha onde há venda assistida e relacionamento, canais com pouca cobertura direta das grandes marcas.</p></div></div>
-</section>
+<!-- 6 SEC 02 -->
+<section class="slide dk sec" data-t="02 Oportunidade B2B" data-s="02 Oportunidade"><div class="ghost">02</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 02</div><h1 class="split">Oportunidade<br>B2B</h1></div></section>
 
-<!-- 10 SEC 03 -->
-<section class="slide dk sec" data-t="03 Oportunidade B2B" data-s="03 Oportunidade"><div class="ghost">03</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 03</div><h1 class="split">Oportunidade<br>B2B</h1></div></section>
-
-<!-- 11 UNIVERSO -->
-<section class="slide dk" data-t="Universo de lojas" data-s="03 Oportunidade">
- <div class="c"><div class="kick r" style="--d:0">03 Oportunidade B2B</div><h2 class="t r" style="--d:1">Cada ponto é uma loja <em>na capital paulista</em></h2>
- <div class="main"><div class="uni">
-  <div class="r" style="--d:2"><canvas id="dots" width="1480" height="636"></canvas>
-   <div class="leg"><span><i style="background:#3a3a3a"></i>Universo registrado</span><span><i style="background:#C00000"></i>Perfil ideal</span><span><i style="background:#fff"></i>Conquistadas em 12 meses</span></div></div>
-  <div class="ctl r" style="--d:3">
-   <label>Parcela do universo no perfil ideal <output id="u_o"></output><input type="range" id="u_p" min="5" max="30" step="1" value="15"></label>
-   <div class="pills" id="u_l"><button class="pill sel" data-k="0">Piloto</button><button class="pill" data-k="1">Tração</button><button class="pill" data-k="2">Escala</button></div>
-   <div class="card"><div class="lab">Lojas no perfil ideal</div><div class="num rd" id="u_n"></div></div>
-   <div class="card"><div class="lab">Conquistadas em 12 meses</div><div class="num" id="u_w"></div><p id="u_c"></p></div>
-   <span class="tag">// Hipótese · recorte validado com lista enriquecida. Base IBGE: 13.648 lojas</span>
+<!-- 7 TAM SAM SOM -->
+<section class="slide dk" data-t="TAM, SAM e SOM" data-s="02 Oportunidade">
+ <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">TAM, SAM e SOM da <em>capital paulista</em></h2>
+ <div class="main"><div class="tsm">
+  <div class="rings"><div class="rg ra" style="--d:0"><span>TAM</span></div><div class="rg rb" style="--d:1"><span>SAM</span></div><div class="rg rc3" style="--d:2"><span>SOM</span></div></div>
+  <div>
+   <div class="tr r" style="--d:2"><div class="k">TAM</div><div><div class="v">13.648 lojas · R$ 95,5 mi por ano</div><div class="d">Todos os mercados, mercearias, armazéns e supermercados registrados na capital (IBGE, 2024).</div></div></div>
+   <div class="tr r" style="--d:3"><div class="k">SAM</div><div><div class="v">~2.050 lojas · R$ 14,3 mi por ano</div><div class="d">Empórios, delicatessens, hortifrutis e açougues de alto padrão: 15% do TAM, em faixa de 10% a 20% (R$ 9,6 a 19,1 mi).</div></div></div>
+   <div class="tr r" style="--d:4"><div class="k">SOM</div><div><div class="v">~200 lojas · R$ 0,84 mi no primeiro ano</div><div class="d">O que o piloto de R$ 5,4 mil em mídia por mês alcança em 12 meses: 10% do SAM.</div></div></div>
   </div></div>
-  </div>
- <div class="cc r" style="--d:5"><b>Conclusão estratégica</b><p>O universo sustenta anos de prospecção na capital. O ritmo de investimento define quanto dele é coberto.</p></div></div>
+ <p class="note r" style="--d:5">Cada loja vale R$ 7.000 por ano sem perdas: primeiro pedido de R$ 2.000 e recompra de R$ 1.000 a cada 60 dias. O SOM considera retenção de 97% ao mês. Valores por loja e o recorte do SAM são estimativas a validar com a Aroma.</p></div></div>
 </section>
 
-<!-- 12 MIX -->
-<section class="slide dk" data-t="Mix de entrada" data-s="03 Oportunidade">
- <div class="c"><div class="kick r" style="--d:0">03 Oportunidade B2B</div><h2 class="t r" style="--d:1">Cada loja recebe um <em>mix de entrada</em></h2>
- <p class="s r" style="--d:2">Uma loja expõe de 20 a 30 dos 130 itens. A escolha do mix faz parte da oferta. Selecione o perfil de loja.</p>
- <div class="main"><div class="tabs r" style="--d:3" id="mx"><button class="pill sel" data-k="0">Empório e delicatessen</button><button class="pill" data-k="1">Hortifruti de bairro</button><button class="pill" data-k="2">Açougue gourmet</button></div>
- <div class="tp r" style="--d:4"><h3 id="mx_h"></h3><p id="mx_p"></p></div>
- <div class="grid g3"><div class="card r" style="--d:5"><div class="lab">Dado de demanda</div><p>A Amazon mostra o que gira. Itens que vendem online e têm pouca exposição na loja, como a pimenta síria, viram argumento.</p></div><div class="card r" style="--d:6"><div class="lab">Formato</div><p>Sachê como porta de entrada, conforme a transição da linha para fecho zip.</p></div><div class="card r" style="--d:7"><div class="lab">Meta de exposição</div><p>De 20 a 30 itens por loja, com foco nas misturas, onde está a margem.</p></div></div>
- <span class="tag r" style="--d:8">// Hipótese · composição final definida com a Aroma</span></div>
- <div class="cc r" style="--d:9"><b>Conclusão estratégica</b><p>Oferta curta e específica reduz o atrito na primeira compra e aumenta a chance de recompra.</p></div></div>
+<!-- 8 GATILHOS -->
+<section class="slide dk" data-t="Gatilhos por perfil" data-s="02 Oportunidade">
+ <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">Um gatilho de venda para <em>cada perfil de loja</em></h2>
+ <div class="main"><div class="grid g3">
+  <div class="card prof r" style="--d:2"><div class="lab">Perfil 1</div><div class="h">Empório e delicatessen</div><div class="g">Curadoria que valoriza a prateleira</div>
+   <ul><li>Marca com 25 anos e linha de misturas autorais.</li><li>Preço abaixo dos pares premium deixa mais margem para a loja.</li><li>Receitas e degustação como material de apoio.</li></ul></div>
+  <div class="card prof r" style="--d:3"><div class="lab">Perfil 2</div><div class="h">Hortifruti de bairro</div><div class="g">Giro recorrente ao lado da erva fresca</div>
+   <ul><li>Erva fresca e tempero pronto no mesmo corredor.</li><li>Pedido de entrada baixo para testar a marca.</li><li>Reposição simples por sachê.</li></ul></div>
+  <div class="card prof r" style="--d:4"><div class="lab">Perfil 3</div><div class="h">Açougue gourmet</div><div class="g">Venda por ocasião, junto da carne</div>
+   <ul><li>Tempero na saída do balcão: bovina, suína, frango, cordeiro e peixes.</li><li>Churrasco de fim de semana como pico de vendas.</li><li>Sugestão de uso por corte.</li></ul></div>
+ </div>
+ <div class="card r" style="--d:5"><div class="lab">Prova comum aos três</div><p style="font-size:17px;color:#e6e6e6">Itens que já vendem na Amazon e têm pouca exposição nas lojas, como a pimenta síria, mostram a demanda que a loja ainda não atende.</p></div></div></div>
 </section>
 
-<!-- 13 MODELO -->
-<section class="slide dk" data-t="Modelo IA-SDR" data-s="03 Oportunidade">
- <div class="c"><div class="kick r" style="--d:0">03 Oportunidade B2B</div><h2 class="t r" style="--d:1">A V4 <em>gera e qualifica.</em> A Aroma fecha</h2>
+<!-- 9 PACOTES -->
+<section class="slide dk" data-t="Pacotes por perfil" data-s="02 Oportunidade">
+ <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">Três pacotes, <em>um por perfil</em></h2>
+ <p class="s r" style="--d:2">Cada loja expõe de 20 a 30 dos 130 itens. O pacote entrega a seleção pronta para o perfil.</p>
+ <div class="main"><div class="grid g3">
+  <div class="card pk r" style="--d:3"><div class="it">Empório e delicatessen</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Assinatura</div><div class="tk">R$ 2.600</div><div class="lab">30 itens · pedido de entrada</div><p>Misturas autorais, ervas e especiarias individuais, pimentas como a síria e chás.</p></div>
+  <div class="card pk r" style="--d:4"><div class="it">Hortifruti de bairro</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Giro</div><div class="tk">R$ 1.700</div><div class="lab">20 itens · pedido de entrada</div><p>Alho e cebola, ervas desidratadas, misturas versáteis e sachês de reposição.</p></div>
+  <div class="card pk r" style="--d:5"><div class="it">Açougue gourmet</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Carnes</div><div class="tk">R$ 1.500</div><div class="lab">16 itens · pedido de entrada</div><p>Sal de parrilha e temperos para carne bovina, suína, frango, cordeiro, peixes e frutos do mar.</p></div>
+ </div>
+ <p class="note r" style="--d:6">Com mix de 40% empórios, 40% hortifrutis e 20% açougues, o ticket médio de referência é de cerca de R$ 2.000, valor usado nas projeções. Composição e preços finais serão definidos com a Aroma.</p></div></div>
+</section>
+
+<!-- 10 MODELO -->
+<section class="slide dk" data-t="Modelo IA-SDR" data-s="02 Oportunidade">
+ <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">A V4 <em>gera e qualifica.</em> A Aroma fecha</h2>
  <div class="main"><div class="flow">
   <div class="card own r" style="--d:2"><div class="lab">Responsabilidade V4</div><div class="h" style="font:800 30px var(--disp);text-transform:uppercase">Geração e qualificação</div>
-   <ol><li>Mapear e enriquecer a base de lojas.</li><li>Captar interesse com mídia e abordagem ativa.</li><li>IA-SDR conversa no WhatsApp e qualifica por perfil, volume e região.</li><li>Entregar a oportunidade pronta, com histórico.</li><li>Relatório semanal de funil e custo.</li></ol></div>
+   <ol><li>Mapear e enriquecer a base de lojas.</li><li>Atrair interesse com tráfego pago e abordagem ativa.</li><li>IA-SDR conversa no WhatsApp e qualifica por perfil, volume e região.</li><li>Entregar a oportunidade pronta, com histórico.</li><li>Relatório semanal de funil e custo.</li></ol></div>
   <div class="card r" style="--d:3"><div class="lab">Responsabilidade Aroma</div><div class="h" style="font:800 30px var(--disp);text-transform:uppercase">Negociação e recompra</div>
-   <ol><li>Responder a oportunidade em até um dia útil.</li><li>Apresentar o mix e fechar o pedido.</li><li>Faturar, entregar e acompanhar a loja.</li><li>Registrar o resultado para recalibrar a IA-SDR.</li><li>Treinar os representantes com o que funcionar.</li></ol></div>
- </div></div>
- <div class="cc r" style="--d:4"><b>Conclusão estratégica</b><p>A carteira nova nasce dentro da empresa, e não na mão do representante.</p></div></div>
+   <ol><li>Responder a oportunidade em até um dia útil.</li><li>Apresentar o pacote e fechar o pedido.</li><li>Faturar, entregar e acompanhar a loja.</li><li>Registrar o resultado para recalibrar a IA-SDR.</li><li>Treinar os representantes com o que funcionar.</li></ol></div>
+ </div></div></div>
 </section>
 
-<!-- 14 BENCHMARK -->
-<section class="slide dk" data-t="Benchmark" data-s="03 Oportunidade">
- <div class="c"><div class="kick r" style="--d:0">03 Oportunidade B2B</div><h2 class="t r" style="--d:1">Resultado real do <em>mesmo modelo</em> no primeiro mês</h2>
- <div class="main"><div class="tag r" style="--d:2">// Case de referência: marca que vende para revenda, IA-SDR da V4 e fechamento pelo cliente</div><div class="fun">
+<!-- 11 BENCHMARK -->
+<section class="slide dk" data-t="Benchmark" data-s="02 Oportunidade">
+ <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">Resultado real do <em>mesmo modelo</em> no primeiro mês</h2>
+ <p class="s r" style="--d:2">Case de referência: marca que vende para revenda, com IA-SDR da V4 e fechamento pelo cliente.</p>
+ <div class="main"><div class="fun">
   <div class="fr"><div class="fb" style="--w:100%;background:#111;border-left:3px solid #C00000;--d:0"><span>Investimento em mídia</span><b data-c="5386" data-p="R$ ">R$ 5.386</b></div><div class="rate">Custo por lead R$ 19,87</div></div>
   <div class="fr"><div class="fb" style="--w:84%;background:#3a0a0a;--d:1"><span>Leads gerados</span><b data-c="271">271</b></div><div class="rate"></div></div>
   <div class="fr"><div class="fb" style="--w:68%;background:#7a0000;--d:2"><span>Leads qualificados</span><b data-c="183">183</b></div><div class="rate">67,5% dos leads</div></div>
   <div class="fr"><div class="fb" style="--w:57%;background:#A00000;--d:3"><span>Trabalhados pelo comercial</span><b data-c="169">169</b></div><div class="rate">92,35% dos qualificados</div></div>
   <div class="fr"><div class="fb" style="--w:30%;background:#C00000;--d:4"><span>Vendas</span><b data-c="17">17</b></div><div class="rate">cerca de 10% de fechamento</div></div>
  </div>
- <div class="grid g4"><div class="card r" style="--d:6"><div class="lab">Faturamento</div><div class="num rd" style="font-size:38px" data-c="87333" data-p="R$ ">R$ 87.333</div></div><div class="card r" style="--d:7"><div class="lab">Retorno (ROAS)</div><div class="num rd" style="font-size:38px" data-c="16.21" data-d="2" data-s="x">16,21x</div></div><div class="card r" style="--d:8"><div class="lab">Custo por cliente</div><div class="num rd" style="font-size:38px" data-c="316.82" data-d="2" data-p="R$ ">R$ 316,82</div></div><div class="card r" style="--d:9"><div class="lab">Custo por qualificado</div><div class="num rd" style="font-size:38px" data-c="29.43" data-d="2" data-p="R$ ">R$ 29,43</div></div></div></div>
- <div class="cc r" style="--d:10"><b>Conclusão estratégica</b><p>O funil se paga por volume qualificado. O ticket do produto define o retorno final.</p></div></div>
+ <div class="grid g4"><div class="card r" style="--d:6"><div class="lab">Faturamento</div><div class="num rd" style="font-size:40px" data-c="87333" data-p="R$ ">R$ 87.333</div></div><div class="card r" style="--d:7"><div class="lab">Retorno (ROAS)</div><div class="num rd" style="font-size:40px" data-c="16.21" data-d="2" data-s="x">16,21x</div></div><div class="card r" style="--d:8"><div class="lab">Custo por cliente</div><div class="num rd" style="font-size:40px" data-c="316.82" data-d="2" data-p="R$ ">R$ 316,82</div></div><div class="card r" style="--d:9"><div class="lab">Custo por qualificado</div><div class="num rd" style="font-size:40px" data-c="29.43" data-d="2" data-p="R$ ">R$ 29,43</div></div></div></div></div>
+</section>
+
+<!-- 12 SEC 03 -->
+<section class="slide dk sec" data-t="03 Projeção" data-s="03 Projeção"><div class="ghost">03</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 03</div><h1 class="split">Projeção</h1></div></section>
+
+<!-- 13 PROJEÇÃO -->
+<section class="slide dk" data-t="Projeção do primeiro mês" data-s="03 Projeção">
+ <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Piloto de R$ 5,4 mil em mídia deve gerar <em>R$ 34 mil por mês</em></h2>
+ <div class="main"><div class="two">
+  <div><div class="fun">
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:100%;background:#3a0a0a;--d:0"><span>Leads</span><b data-c="271">271</b></div><div class="rate">CPL R$ 19,87</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:68%;background:#7a0000;--d:1"><span>Qualificados</span><b data-c="183">183</b></div><div class="rate">67,5%</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:57%;background:#A00000;--d:2"><span>Trabalhados</span><b data-c="169">169</b></div><div class="rate">92,35%</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:40%;background:#C00000;--d:3"><span>Vendas</span><b data-c="16.8" data-d="1">16,8</b></div><div class="rate">9,94%</div></div>
+  </div>
+  <div class="grid g3" style="margin-top:14px"><div class="card stat r" style="--d:5"><div class="lab">Faturamento</div><div class="num rd" style="font-size:30px;white-space:nowrap">R$ 33,6 mil</div></div><div class="card stat r" style="--d:6"><div class="lab">Retorno</div><div class="num rd" style="font-size:30px">6,2x</div></div><div class="card stat r" style="--d:7"><div class="lab">Custo por cliente</div><div class="num rd" style="font-size:30px">R$ 321</div></div></div></div>
+  <div class="r" style="--d:4"><div class="lab" style="margin-bottom:10px">Por nível de investimento em mídia</div>
+   <div class="card" style="padding:6px 0 0"><table style="font-size:15px"><tr><th style="background:transparent;color:#aaa">Mídia por mês</th><th class="n" style="background:transparent;color:#aaa">Vendas</th><th class="n" style="background:transparent;color:#aaa">Faturamento</th><th class="n" style="background:transparent;color:#aaa">Lojas em 12 meses</th></tr>
+    <tr><td>R$ 5,4 mil</td><td class="n">16,8</td><td class="n">R$ 33,6 mil</td><td class="n">~200</td></tr>
+    <tr><td>R$ 15 mil</td><td class="n">46,8</td><td class="n">R$ 93,6 mil</td><td class="n">~560</td></tr>
+    <tr><td>R$ 30 mil</td><td class="n">93,6</td><td class="n">R$ 187 mil</td><td class="n">~1.120</td></tr></table></div>
+   <p class="note" style="margin-top:12px">Base: taxas do case e ticket médio de R$ 2.000. No piloto, a faixa vai de R$ 9,9 mil (ticket de R$ 1.500 e funil mais fraco) a R$ 50,4 mil (ticket de R$ 3.000). O nível de R$ 30 mil exige ampliar o território para a Grande São Paulo.</p></div>
+ </div></div></div>
+</section>
+
+<!-- 14 RECOMPRA -->
+<section class="slide dk" data-t="Projeção de recompra" data-s="03 Projeção">
+ <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Recompra leva o piloto a <em>R$ 104 mil por mês</em></h2>
+ <div class="main"><div class="two" style="grid-template-columns:1.5fr 1fr">
+  <div class="r" style="--d:2"><div class="lg"><span><i style="background:#d9d9d9"></i>Primeiro pedido</span><span><i style="background:#C00000"></i>Recompra</span></div>
+   <div class="chart" id="rc"></div><div class="xl" id="rx"></div>
+   <p class="note" style="margin-top:10px">Faturamento mensal em R$ mil, piloto de R$ 5,4 mil em mídia, 16,8 lojas novas por mês.</p></div>
+  <div class="grid" style="gap:10px">
+   <div class="card r" style="--d:3"><div class="lab">Faturamento em 12 meses</div><div class="num rd" style="font-size:46px">R$ 842 mil</div><p>R$ 403 mil em primeiros pedidos e R$ 439 mil em recompra.</p></div>
+   <div class="card r" style="--d:4"><div class="lab">Peso da recompra</div><div class="num rd" style="font-size:46px" data-c="52" data-s="%">52%</div><p>Das vendas do primeiro ano, já com perda de lojas.</p></div>
+
+  </div></div>
+ <p class="note r" style="--d:6">Em 12 meses, R$ 15 mil em mídia somam R$ 2,34 mi e R$ 30 mil somam R$ 4,69 mi. Premissas: cada loja recompra a cada 60 dias com 50% do valor do primeiro pedido (R$ 1.000) e 97% das lojas permanecem ativas a cada mês, cerca de 69% ao fim de 12 meses. A taxa real será medida a partir do terceiro mês.</p></div></div>
 </section>
 
 <!-- 15 SEC 04 -->
-<section class="slide dk sec" data-t="04 Projeção" data-s="04 Projeção"><div class="ghost">04</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 04</div><h1 class="split">Projeção</h1></div></section>
+<section class="slide dk sec" data-t="04 Proposta" data-s="04 Proposta"><div class="ghost">04</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 04</div><h1 class="split">Proposta</h1></div></section>
 
-<!-- 16 SIMULADOR -->
-<section class="slide dk" data-t="Simulador" data-s="04 Projeção">
- <div class="c"><div class="kick r" style="--d:0">04 Projeção</div><h2 class="t r" style="--d:1">Simule o <em>primeiro mês</em></h2>
- <div class="main"><div class="sim">
-  <div class="ctl r" style="--d:2">
-   <div class="pills" id="pr"><button class="pill" data-p="c">Conservador</button><button class="pill sel" data-p="b">Base</button><button class="pill" data-p="o">Otimista</button></div>
-   <label>Investimento em mídia por mês <output id="o_inv"></output><input type="range" id="inv" min="3000" max="40000" step="1"></label>
-   <label>Custo por lead <output id="o_cpl"></output><input type="range" id="cpl" min="10" max="45" step="0.01"></label>
-   <label>Leads qualificados <output id="o_q"></output><input type="range" id="q" min="30" max="85" step="0.01"></label>
-   <label>Trabalhados pelo comercial <output id="o_c"></output><input type="range" id="c" min="60" max="100" step="0.01"></label>
-   <label>Taxa de fechamento <output id="o_cl"></output><input type="range" id="cl" min="3" max="15" step="0.01"></label>
-   <label>Ticket do primeiro pedido <output id="o_t"></output><input type="range" id="t" min="800" max="5000" step="50"></label>
+<!-- 16 PRIMEIRO MÊS -->
+<section class="slide dk" data-t="Primeiro mês" data-s="04 Proposta">
+ <div class="c"><div class="kick r" style="--d:0">04 Proposta</div><h2 class="t r" style="--d:1">Primeiro mês: do kickoff à <em>operação rodando</em></h2>
+ <p class="s r" style="--d:2">Tráfego pago e IA-SDR entram juntos, com campanhas no ar na terceira semana.</p>
+ <div class="main"><div class="tl r" style="--d:3"><div class="ln"><i></i></div>
+  <div class="st"><div class="w">Semana 1</div><h4>Kickoff</h4><ul><li>Alinhamento com diretoria e comercial</li><li>Acessos: anúncios, WhatsApp e CRM</li><li>Perfis, pacotes e regra com representantes</li></ul></div>
+  <div class="st"><div class="w">Semana 2</div><h4>Planejamento</h4><ul><li>Estrutura de campanhas e públicos por perfil</li><li>Criativos por pacote</li><li>Scripts e fluxo da IA-SDR</li><li>Rastreamento e painel</li></ul></div>
+  <div class="st"><div class="w">Semana 3</div><h4>Início</h4><ul><li>Campanhas de tráfego pago no ar</li><li>IA-SDR atendendo no WhatsApp</li><li>Primeiras oportunidades ao comercial</li></ul></div>
+  <div class="st"><div class="w">Semana 4</div><h4>Otimização</h4><ul><li>Ajuste de público, criativo e mensagem</li><li>Primeiro relatório de funil e custo</li><li>Plano do segundo mês</li></ul></div>
+ </div></div></div>
+</section>
+
+<!-- 17 PROPOSTA -->
+<section class="slide dk" data-t="Proposta comercial" data-s="04 Proposta">
+ <div class="c"><div class="kick r" style="--d:0">04 Proposta</div><h2 class="t r" style="--d:1">Time de performance B2B <em>mais IA-SDR</em></h2>
+ <div class="main"><div class="two" style="grid-template-columns:1.1fr 1fr;gap:22px">
+  <div class="team">
+   <div class="card r" style="--d:2"><div class="lab">Time</div><div class="h">Gestor de projeto</div><p>Coordena o plano, o comercial da Aroma e os relatórios.</p></div>
+   <div class="card r" style="--d:3"><div class="lab">Time</div><div class="h">Gestor de tráfego</div><p>Campanhas, públicos, orçamento e custo por lead.</p></div>
+   <div class="card r" style="--d:4"><div class="lab">Time</div><div class="h">Designer</div><p>Criativos e materiais de cada pacote e perfil.</p></div>
+   <div class="card r" style="--d:5"><div class="lab">Automação</div><div class="h">IA-SDR</div><p>Atende, qualifica e entrega a oportunidade no WhatsApp.</p></div>
   </div>
-  <div class="out r" style="--d:3">
-   <div class="big"><div class="lab">Faturamento do primeiro pedido, por mês</div><div class="num" id="r_fat"></div><div class="meter"><i id="r_bar"></i></div><div class="lab" style="margin-top:8px">Retorno sobre mídia <b id="r_roas" style="color:#fff"></b></div></div>
-   <div class="card"><div class="lab">Leads</div><div class="num" id="r_leads"></div></div>
-   <div class="card"><div class="lab">Vendas</div><div class="num" id="r_v"></div></div>
-   <div class="card"><div class="lab">Custo por cliente</div><div class="num" id="r_cac"></div></div>
-   <div class="card"><div class="lab">Lojas em 12 meses</div><div class="num" id="r_12"></div></div>
-  </div></div></div>
- <div class="cc r" style="--d:4"><b>Conclusão estratégica</b><p>O ticket do primeiro pedido é a variável de maior impacto. A recompra não está incluída e representa ganho adicional.</p></div></div>
+  <div class="inv r" style="--d:3">
+   <div class="row"><div>Time de performance<small>Gestor de projeto, gestor de tráfego e designer</small></div><b>R$ 7.000<small style="font:400 13px var(--txt)">por mês</small></b></div>
+   <div class="row"><div>IA-SDR, implementação<small>3 parcelas</small></div><b>3x R$ 990</b></div>
+   <div class="row"><div>IA-SDR, mensalidade<small>Inclui custos de disparos adicionais</small></div><b>R$ 1.990<small style="font:400 13px var(--txt)">por mês</small></b></div>
+   <div class="tot">Mídia à parte, a partir de R$ 5,4 mil por mês no piloto.<br>Meses 1 a 3: R$ 9.980 por mês. A partir do mês 4: R$ 8.990 por mês.</div>
+  </div></div>
+ <div class="card r" style="--d:6"><div class="lab">Retorno projetado no primeiro ano</div><p style="font-size:18px;color:#fff">R$ 175 mil de investimento total, com a mídia do piloto, para R$ 842 mil de faturamento projetado: 4,8 vezes.</p></div></div></div>
 </section>
 
-<!-- 17 CENÁRIOS -->
-<section class="slide lt" data-t="Cenários e escala" data-s="04 Projeção">
- <div class="c"><div class="kick r" style="--d:0">04 Projeção</div><h2 class="t r" style="--d:1">Três níveis de mídia, <em>três ritmos</em></h2>
- <div class="main"><div class="pills r" style="--d:2" id="lv"><button class="pill sel" data-l="0">R$ 5,4 mil por mês</button><button class="pill" data-l="1">R$ 15 mil por mês</button><button class="pill" data-l="2">R$ 30 mil por mês</button></div>
- <table class="r" style="--d:3">
-  <tr><th>Cenário</th><th class="n">Vendas por mês</th><th class="n">Faturamento</th><th class="n">Retorno</th></tr>
-  <tr><td>Conservador<span class="badge br">ticket R$ 1.500</span></td><td class="n" id="s_c1"></td><td class="n" id="s_c2"></td><td class="n" id="s_c3"></td></tr>
-  <tr class="hl"><td>Base<span class="badge bn">ticket R$ 2.000</span></td><td class="n" id="s_b1"></td><td class="n" id="s_b2"></td><td class="n" id="s_b3"></td></tr>
-  <tr><td>Otimista<span class="badge bg">ticket R$ 3.000</span></td><td class="n" id="s_o1"></td><td class="n" id="s_o2"></td><td class="n" id="s_o3"></td></tr>
- </table>
- <div class="grid g2 r" style="--d:4"><div class="card"><div class="lab">Lojas novas em 12 meses (base)</div><div class="num rd" id="s_l"></div></div><div class="card"><div class="lab">Leitura</div><p id="s_t" style="color:var(--ink)"></p></div></div></div>
- <div class="cc r" style="--d:5"><b>Conclusão estratégica</b><p>Começar no nível menor valida ticket, fechamento e capacidade de atendimento antes de comprometer mais mídia.</p></div></div>
-</section>
-
-<!-- 18 RISCOS -->
-<section class="slide dk" data-t="Riscos e premissas" data-s="04 Projeção">
- <div class="c"><div class="kick r" style="--d:0">04 Projeção</div><h2 class="t r" style="--d:1">O que pode mudar o resultado e <em>como tratamos</em></h2>
- <div class="main"><div class="grid g2">
-  <div class="card r" style="--d:2"><div class="tag">// Hipótese</div><div class="h">Ticket do primeiro pedido</div><p>Os valores de R$ 1.500 a R$ 3.000 são estimativas. Serão trocados pela tabela e pelo pedido mínimo da Aroma.</p></div>
-  <div class="card r" style="--d:3"><div class="tag">// Hipótese</div><div class="h">Capacidade de resposta</div><p>No cenário base são cerca de 17 oportunidades por mês. O comercial precisa responder em até um dia útil.</p></div>
-  <div class="card r" style="--d:4"><div class="tag">// Fato observado</div><div class="h">Conflito com representantes</div><p>Definir antes quem atende a loja captada e como eles participam. A carteira nova é da empresa.</p></div>
-  <div class="card r" style="--d:5"><div class="tag">// Fato observado</div><div class="h">Case de outro produto</div><p>O funil vem de outro ticket. Serve de parâmetro e é recalibrado com os dados do primeiro mês.</p></div>
- </div></div>
- <div class="cc r" style="--d:6"><b>Conclusão estratégica</b><p>As premissas são testáveis em 30 dias. O piloto existe para trocar hipótese por dado.</p></div></div>
-</section>
-
-<!-- 19 SEC 05 -->
-<section class="slide dk sec" data-t="05 Proposta" data-s="05 Proposta"><div class="ghost">05</div><div class="hero"><div class="kick r" style="--d:0;margin-bottom:18px">Seção 05</div><h1 class="split">Proposta</h1></div></section>
-
-<!-- 20 PLANO -->
-<section class="slide dk" data-t="Plano de 90 dias" data-s="05 Proposta">
- <div class="c"><div class="kick r" style="--d:0">05 Proposta</div><h2 class="t r" style="--d:1">Piloto de 90 dias com <em>decisão de escala</em> no fim</h2>
- <div class="main"><div class="tl r" style="--d:2"><div class="ln"><i></i></div>
-  <div class="st"><div class="w">Semanas 1 e 2</div><h4>Preparação</h4><ul><li>Lista de lojas enriquecida</li><li>Perfil ideal e mix de entrada</li><li>Scripts e fluxo da IA-SDR</li><li>Rastreamento e painel</li></ul></div>
-  <div class="st"><div class="w">Semana 3</div><h4>Lançamento</h4><ul><li>Primeiro lote de lojas</li><li>Mídia e abordagem ativa</li><li>Primeiras oportunidades ao comercial</li></ul></div>
-  <div class="st"><div class="w">Semanas 4 a 8</div><h4>Otimização</h4><ul><li>Ajuste semanal de mensagem e mix</li><li>Leitura de fechamento e ticket</li><li>Treino com representantes</li></ul></div>
-  <div class="st"><div class="w">Semanas 9 a 12</div><h4>Decisão</h4><ul><li>Balanço com dados reais</li><li>Revisão da projeção</li><li>Decisão de escala e território</li></ul></div>
- </div></div>
- <div class="cc r" style="--d:3"><b>Conclusão estratégica</b><p>Em 90 dias a Aroma terá uma carteira inicial nova e dados próprios para decidir quanto investir.</p></div></div>
-</section>
-
-<!-- 21 INVESTIMENTO -->
-<section class="slide dk" data-t="Investimento modular" data-s="05 Proposta">
- <div class="c"><div class="kick r" style="--d:0">05 Proposta</div><h2 class="t r" style="--d:1">Investimento <em>modular</em>, no ritmo da Aroma</h2>
- <div class="main"><div class="grid g3" id="tiers">
-  <button class="card tier sel r" style="--d:2" data-k="0"><span class="rec">Recomendado</span><div class="lab">Piloto</div><div class="num">R$ 5,4 mil</div><div class="h">mídia por mês</div><p>Cerca de 17 vendas e R$ 34 mil por mês no cenário base.</p></button>
-  <button class="card tier r" style="--d:3" data-k="1"><div class="lab">Tração</div><div class="num">R$ 15 mil</div><div class="h">mídia por mês</div><p>Cerca de 47 vendas e R$ 94 mil por mês no cenário base.</p></button>
-  <button class="card tier r" style="--d:4" data-k="2"><div class="lab">Escala</div><div class="num">R$ 30 mil</div><div class="h">mídia por mês</div><p>Cerca de 94 vendas e R$ 187 mil por mês. Exige ampliar o território.</p></button>
- </div>
- <div class="grid g2"><div class="card r" style="--d:5"><div class="lab">Gatilho para subir de nível</div><p>Fechamento acima de 7% e custo por cliente abaixo de 30% do ticket, por dois meses seguidos.</p></div>
- <div class="card r" style="--d:6"><div class="lab">Honorários V4</div><p>IA-SDR, gestão, mídia e relatórios. Valores definidos na proposta comercial.</p></div></div></div>
- <div class="cc r" style="--d:7"><b>Conclusão estratégica</b><p>O compromisso é modular e de médio prazo. A mídia sobe quando o dado autoriza, não antes.</p></div></div>
-</section>
-
-<!-- 22 CHECKLIST -->
-<section class="slide dk" data-t="Próximos passos" data-s="05 Proposta">
- <div class="c"><div class="kick r" style="--d:0">05 Proposta</div><h2 class="t r" style="--d:1">O que precisamos para <em>começar</em></h2>
- <p class="s r" style="--d:2">Marque o que já está disponível. Cada item destrava uma etapa do plano.</p>
- <div class="main"><div class="grid g2" id="chk" style="gap:10px 16px">
-  <button class="chk r" style="--d:3" data-i="0"><i></i><div><b>Tabela de preços de atacado</b><span>e pedido mínimo por loja</span></div></button>
-  <button class="chk r" style="--d:4" data-i="1"><i></i><div><b>Regra com representantes</b><span>quem atende a loja captada</span></div></button>
-  <button class="chk r" style="--d:5" data-i="2"><i></i><div><b>Responsável comercial</b><span>pessoa e prazo de resposta</span></div></button>
-  <button class="chk r" style="--d:6" data-i="3"><i></i><div><b>Mix de entrada</b><span>itens por perfil de loja</span></div></button>
-  <button class="chk r" style="--d:7" data-i="4"><i></i><div><b>Dados da Amazon</b><span>itens que mais vendem</span></div></button>
-  <button class="chk r" style="--d:8" data-i="5"><i></i><div><b>Acesso ao Instagram</b><span>e alinhamento com a agência atual</span></div></button>
-  <button class="chk r" style="--d:9" data-i="6"><i></i><div><b>Logística em São Paulo</b><span>prazo e frete de entrega</span></div></button>
-  <button class="chk r" style="--d:10" data-i="7"><i></i><div><b>Material de venda</b><span>fotos, apresentação e kit</span></div></button>
- </div><div class="tag" id="chkc"></div></div>
- <div class="cc r" style="--d:11"><b>Conclusão estratégica</b><p>Com esses oito itens, o piloto entra no ar em cerca de três semanas.</p></div></div>
-</section>
-
-<!-- 23 FECHAMENTO -->
+<!-- 18 FECHAMENTO -->
 <section class="slide dk cover" data-t="Encerramento" data-s="Próximo passo">
  <canvas id="speed2"></canvas>
  <div class="hero"><div class="kick r" style="--d:0;margin-bottom:22px">Próximo passo</div>
-  <h1 class="split">Aprovar o piloto<br>de <em>90 dias</em></h1>
-  <p class="r" style="--d:8">Começamos pela preparação e pela lista de lojas. Em três semanas, a primeira oportunidade chega ao comercial da Aroma.</p></div>
+  <h1 class="split">Aprovar o piloto<br>e marcar o <em>kickoff</em></h1>
+  <p class="r" style="--d:8">Para começar: tabela de preços de atacado e pedido mínimo, regra com os representantes e um responsável comercial na Aroma.</p></div>
 </section>
 
 <div id="chrome"><div id="cl"><b>V4</b> Carvalho &amp; Co</div><div id="cs"></div><div id="cc">Aroma das Ervas</div><div id="ct"></div>
@@ -444,7 +444,7 @@ function activate(n){cur=n;S.forEach(function(s,i){s.classList.toggle('on',i===n
  $('cs').textContent=S[n].dataset.s||'';$('cnt').textContent=String(n+1).padStart(2,'0')+' / '+N;
  [].forEach.call(ct.children,function(t,i){t.className=i<n?'d':i===n?'c':''});
  S[n].querySelectorAll('[data-c]').forEach(count);
- speedOn(n);if(S[n].querySelector('#dots'))dotsAnim();
+ speedOn(n);
  try{history.replaceState(null,'','#s'+(n+1))}catch(e){}}
 function go(n){n=Math.max(0,Math.min(N-1,n));if(n===cur||busy)return;
  if(cur<0||reduce){activate(n);return}
@@ -472,47 +472,12 @@ function mk(w,h){var a=[];for(var i=0;i<70;i++)a.push({x:Math.random()*w*1.4,y:M
 function speedOn(n){cancelAnimationFrame(raf);var c=cvs.filter(function(c){return c.i===n})[0];if(!c||reduce)return;var cv=c.el,w=cv.width=1280,h=cv.height=720,x=cv.getContext('2d'),L=mk(w,h);
  (function loop(){x.clearRect(0,0,w,h);L.forEach(function(l){x.strokeStyle=l.r?'rgba(192,0,0,'+(l.a+.3)+')':'rgba(255,255,255,'+l.a*.55+')';x.lineWidth=l.r?2:1;x.beginPath();x.moveTo(l.x,l.y);x.lineTo(l.x+l.l,l.y-l.l*.36);x.stroke();l.x-=l.v;l.y+=l.v*.36;if(l.x+l.l<0||l.y>h){l.x=w+Math.random()*300;l.y=-Math.random()*200+Math.random()*h*.8}});raf=requestAnimationFrame(loop)})()}
 
-/* universe dots */
-var COLS=185,ROWS=74,TOT=COLS*ROWS,rank=new Uint16Array(TOT),UNI=13648,ds=null;
-(function(){var o=[];for(var i=0;i<TOT;i++)o.push(i);var s=7;function rnd(){s=(s*1664525+1013904223)%4294967296;return s/4294967296}for(var i=TOT-1;i>0;i--){var j=Math.floor(rnd()*(i+1));var t=o[i];o[i]=o[j];o[j]=t}for(var k=0;k<TOT;k++)rank[o[k]]=k})();
-var WON=[206,560,1123],lvl=0,dp=1;
-function drawDots(){var cv=$('dots'),x=cv.getContext('2d');if(!cv)return;var pw=cv.width/COLS,ph=cv.height/ROWS,sz=Math.min(pw,ph)*.62;var pct=+$('u_p').value/100,icp=Math.round(UNI*pct),scale=TOT/UNI,icpD=icp*scale,wonD=Math.min(WON[lvl],icp)*scale;
- x.clearRect(0,0,cv.width,cv.height);for(var i=0;i<TOT;i++){var cx=i%COLS,cy=(i/COLS)|0;if((cx+cy*2)/(COLS+ROWS*2)>dp)continue;var r=rank[i];x.fillStyle=r<wonD?'#fff':r<icpD?'#C00000':'#2e2e2e';x.fillRect(cx*pw+(pw-sz)/2,cy*ph+(ph-sz)/2,sz,sz)}
- $('u_o').textContent=Math.round(pct*100)+'%';$('u_n').textContent=fmt(icp);var w=Math.min(WON[lvl],icp);$('u_w').textContent='~'+fmt(w);$('u_c').textContent=fmt(w/icp*100,0)+'% do perfil ideal'+(WON[lvl]>icp*.4?'. Exige ampliar para a Grande São Paulo.':'.')}
-function dotsAnim(){dp=reduce?2:0;var t0=null;(function f(ts){if(!t0)t0=ts;dp=Math.min(1.05,(ts-t0-500)/1300);drawDots();if(dp<1.05)requestAnimationFrame(f)})(performance.now())}
-$('u_p').addEventListener('input',function(){dp=2;drawDots()});
-document.querySelectorAll('#u_l .pill').forEach(function(b){b.onclick=function(){lvl=+b.dataset.k;document.querySelectorAll('#u_l .pill').forEach(function(x){x.classList.toggle('sel',x===b)});dp=2;drawDots()}});dp=2;drawDots();
 
-/* mix tabs */
-var MX=[['Empório e delicatessen','Maior afinidade com marca premium. Seleção com misturas especiais e ervas e especiarias individuais em sachê, apresentadas como linha de assinatura.'],['Hortifruti de bairro','Alto giro e comprador recorrente. Seleção de uso diário: misturas versáteis e ervas desidratadas ao lado das ervas frescas.'],['Açougue gourmet','Venda por ocasião. Seleção de temperos para carnes, aves e churrasco, com sugestão de uso por corte.']];
-function mx(i){$('mx_h').textContent=MX[i][0];$('mx_p').textContent=MX[i][1];document.querySelectorAll('#mx .pill').forEach(function(b,j){b.classList.toggle('sel',j===i)})}
-document.querySelectorAll('#mx .pill').forEach(function(b){b.onclick=function(){mx(+b.dataset.k)}});mx(0);
-
-/* simulator */
-var P={c:{inv:5386,cpl:25.83,q:50,c:90,cl:7,t:1500},b:{inv:5386,cpl:19.87,q:67.53,c:92.35,cl:9.94,t:2000},o:{inv:5386,cpl:19.87,q:67.53,c:92.35,cl:9.94,t:3000}};
-var ids=['inv','cpl','q','c','cl','t'],el={};ids.forEach(function(k){el[k]=$(k)});
-function calc(v){var leads=v.inv/v.cpl,vend=leads*v.q/100*v.c/100*v.cl/100;return{leads:leads,vend:vend,cac:vend?v.inv/vend:0,fat:vend*v.t}}
-function sim(){var v={};ids.forEach(function(k){v[k]=parseFloat(el[k].value)});var r=calc(v);
- $('o_inv').textContent=brl(v.inv);$('o_cpl').textContent=brl(v.cpl,2);$('o_q').textContent=fmt(v.q,1)+'%';$('o_c').textContent=fmt(v.c,1)+'%';$('o_cl').textContent=fmt(v.cl,1)+'%';$('o_t').textContent=brl(v.t);
- $('r_fat').textContent=brl(r.fat);$('r_roas').textContent=fmt(r.fat/v.inv,1)+'x';$('r_bar').style.width=Math.min(100,r.fat/v.inv/16.21*100)+'%';
- $('r_leads').textContent=fmt(r.leads);$('r_v').textContent=fmt(r.vend,1);$('r_cac').textContent=brl(r.cac);$('r_12').textContent=fmt(r.vend*12)}
-function setP(k){ids.forEach(function(i){el[i].value=P[k][i]});document.querySelectorAll('#pr .pill').forEach(function(b){b.classList.toggle('sel',b.dataset.p===k)});sim()}
-ids.forEach(function(k){el[k].addEventListener('input',function(){document.querySelectorAll('#pr .pill').forEach(function(b){b.classList.remove('sel')});sim()})});
-document.querySelectorAll('#pr .pill').forEach(function(b){b.onclick=function(){setP(b.dataset.p)}});setP('b');
-
-/* scenarios */
-var LV=[5386,15000,30000],TX=['Valida o funil com pouco risco. Cerca de 200 lojas em 12 meses.','Acelera a carteira. Cerca de 560 lojas em 12 meses.','Ritmo máximo. Cerca de 1.100 lojas exigem ampliar o território para a Grande São Paulo.'];
-function lv(i){var inv=LV[i];document.querySelectorAll('#lv .pill').forEach(function(b,j){b.classList.toggle('sel',j===i)});
- [['c',P.c],['b',P.b],['o',P.o]].forEach(function(a){var r=calc(Object.assign({},a[1],{inv:inv}));$('s_'+a[0]+'1').textContent=fmt(r.vend,1);$('s_'+a[0]+'2').textContent=brl(r.fat);$('s_'+a[0]+'3').textContent=fmt(r.fat/inv,1)+'x'});
- $('s_l').textContent='~'+fmt(Math.round(calc(Object.assign({},P.b,{inv:inv})).vend*12/10)*10);$('s_t').textContent=TX[i]}
-document.querySelectorAll('#lv .pill').forEach(function(b){b.onclick=function(){lv(+b.dataset.l)}});lv(0);
-document.querySelectorAll('#tiers .tier').forEach(function(t){t.onclick=function(){document.querySelectorAll('#tiers .tier').forEach(function(x){x.classList.toggle('sel',x===t)})}});
-
-/* checklist */
-var KEY='aroma-v4-chk2',saved=[];try{saved=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
-var ck=[].slice.call(document.querySelectorAll('#chk .chk'));
-function upd(){var n=ck.filter(function(c){return c.classList.contains('done')}).length;$('chkc').textContent='// '+n+' de '+ck.length+' itens confirmados';try{localStorage.setItem(KEY,JSON.stringify(ck.map(function(c,i){return c.classList.contains('done')?i:-1}).filter(function(i){return i>=0})))}catch(e){}}
-ck.forEach(function(c,i){if(saved.indexOf(i)>=0){c.classList.add('done');c.querySelector('i').textContent='✓'}c.onclick=function(){var d=c.classList.toggle('done');c.querySelector('i').textContent=d?'✓':'';upd()}});upd();
+/* recompra chart */
+(function(){var n=16.8,first=2000,re=1000,sv=.97,box=$('rc'),xl=$('rx'),max=0,rows=[];
+ for(var t=1;t<=12;t++){var r=0;for(var s=1;s<t;s++){if((t-s)%2===0)r+=n*Math.pow(sv,t-s)*re}rows.push([n*first,r]);max=Math.max(max,n*first+r)}
+ rows.forEach(function(v,i){var c=document.createElement('div');c.className='col';c.style.setProperty('--i',i);c.style.setProperty('--ha',(v[0]/max*100*.88)+'%');c.style.setProperty('--hb',(v[1]/max*100*.88)+'%');
+  c.innerHTML='<em>'+Math.round((v[0]+v[1])/1000)+'</em><div class="b"></div><div class="a"></div>';box.appendChild(c);var x=document.createElement('span');x.textContent='M'+(i+1);xl.appendChild(x)})})();
 activate(hashN());
 })();
 </script>
