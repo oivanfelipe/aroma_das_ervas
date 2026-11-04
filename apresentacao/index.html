@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma das Ervas | Prospecção B2B | V4 Carvalho &amp; Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap">
+<style>
+:root{--black:#111;--red:#C00000;--wine:#6B0000;--gray-d:#595959;--gray-l:#F5F5F5;--line:#D9D9D9;--white:#fff;--redl:#FFF5F5;--green:#1B7F37;--greenl:#E6F4EA;--redb:#FDDEDE;
+--head:'Oswald','Arial Narrow',Arial,sans-serif;--body:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;overflow:hidden;font-family:var(--body);color:var(--black)}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#000;--cur:0}
+.slide{position:absolute;inset:0;transform:translateX(calc((var(--i) - var(--cur)) * 100%));transition:transform .55s cubic-bezier(.65,0,.25,1),visibility 0s linear .55s;visibility:hidden}
+.slide.near{visibility:visible;transition:transform .55s cubic-bezier(.65,0,.25,1)}
+.light{background:var(--white);padding:34px 64px 52px;display:grid;grid-template-rows:auto auto auto 1fr auto;row-gap:10px}
+.dark{background:#0a0a0a;color:#fff}
+.dark::before{content:"";position:absolute;inset:0;background:
+ repeating-linear-gradient(115deg,transparent 0 58px,rgba(255,255,255,.035) 58px 59px),
+ linear-gradient(115deg,transparent 55%,rgba(192,0,0,.28) 55.2%,rgba(192,0,0,.28) 57%,transparent 57.2%,transparent 60%,rgba(192,0,0,.14) 60.2%,rgba(192,0,0,.14) 61%,transparent 61.2%),
+ radial-gradient(ellipse at 80% 10%,rgba(192,0,0,.22),transparent 55%)}
+.dark>*{position:relative}
+.logo{font:700 15px var(--head);letter-spacing:.04em;position:absolute}
+.light .logo{top:34px;right:64px;color:var(--black)}
+.dark .logo{bottom:34px;right:64px;color:#fff}
+.client{position:absolute;bottom:34px;left:64px;font:700 15px var(--head);letter-spacing:.08em;color:#fff}
+.hdr{font:700 15px var(--head);color:var(--red);text-transform:uppercase;letter-spacing:.06em;padding-bottom:8px;border-bottom:2px solid var(--red);margin-right:0;width:100%}
+.light .hdr{width:calc(100% - 170px)}
+h2{font:700 34px/1.1 var(--head);text-transform:uppercase;max-width:1000px}
+.sub{font-size:18px;color:var(--gray-d);max-width:980px}
+.body{min-height:0;display:flex;flex-direction:column;justify-content:center;gap:14px;padding-top:6px}
+.concl{border-top:2px solid var(--red);padding-top:9px;display:flex;gap:16px;align-items:baseline}
+.concl b{font:700 15px var(--head);color:var(--red);white-space:nowrap;letter-spacing:.05em}
+.concl p{font-size:16px;line-height:1.35}
+.cap{font-size:14px;color:var(--gray-d)}
+/* dark content */
+.dk{position:absolute;left:64px;right:64px;top:50%;transform:translateY(-50%)}
+.dk .k{font:700 18px var(--head);color:var(--red);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.dk h1{font:700 92px/.98 var(--head);text-transform:uppercase;letter-spacing:-.01em}
+.dk h1 em{font-style:normal;color:var(--red)}
+.dk p{font-size:22px;color:#cfcfcf;margin-top:24px;max-width:760px}
+.dk .big{font:700 150px/1 var(--head);color:var(--red);opacity:.9}
+.sec h1{font-size:76px}
+/* cards */
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--gray-l);border-radius:8px;border-left:5px solid var(--line);padding:16px 18px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.card.r{border-left-color:var(--red)}
+.card.neg{background:var(--redl);border-left-color:var(--red)}
+.card .n{font:700 40px/1 var(--head);color:var(--red)}
+.card .c{font:700 13px var(--body);text-transform:uppercase;letter-spacing:.05em}
+.card .h{font:700 16px/1.25 var(--body)}
+.card p{font-size:15px;line-height:1.35;color:#222}
+.tag{font:700 12px var(--body);color:var(--red);letter-spacing:.04em}
+.blk{background:#fff;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:6px;padding:13px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.blk .t{font:700 15px var(--body);text-transform:uppercase}
+.blk p{font-size:15px;line-height:1.35}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{background:var(--black);color:#fff;text-transform:uppercase;text-align:left;padding:9px 12px;font-size:13px;letter-spacing:.04em}
+td{padding:9px 12px;vertical-align:top;line-height:1.3}
+tr:nth-child(even) td{background:var(--gray-l)}
+tr.hl td{background:var(--redl)!important;font-weight:700}
+td.n,th.n{text-align:right}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font:700 13px var(--body)}
+.b-g{background:var(--greenl);color:var(--green)}.b-r{background:var(--redb);color:var(--red)}.b-n{background:#F0F0F0;color:var(--gray-d)}
+/* funnel */
+.fun{display:flex;flex-direction:column;gap:8px}
+.frow{display:grid;grid-template-columns:1fr 210px;gap:16px;align-items:center}
+.fbar{height:50px;border-radius:4px;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-weight:700;font-size:16px;width:0;transition:width .9s cubic-bezier(.2,.7,.2,1);white-space:nowrap;overflow:hidden}
+.on .fbar{width:var(--w)}
+.fbar b{font:700 22px var(--head)}
+.rate{font-size:14px;color:var(--gray-d)}
+/* simulator */
+.sim{display:grid;grid-template-columns:1.05fr 1fr;gap:26px;align-items:start}
+.ctrl{display:flex;flex-direction:column;gap:9px}
+.ctrl label{display:grid;grid-template-columns:1fr auto;font-size:14px;gap:2px 8px}
+.ctrl label output{font:700 15px var(--head);color:var(--red)}
+.ctrl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--red);height:18px}
+.presets{display:flex;gap:8px}
+button.pill,.pill{border:1.5px solid var(--black);background:#fff;color:var(--black);font:700 13px var(--body);padding:7px 14px;border-radius:20px;cursor:pointer;letter-spacing:.03em}
+.pill.sel,.pill:hover{background:var(--black);color:#fff}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.out .card .n{font-size:32px}
+.dkcard{background:var(--black);color:#fff;border-radius:8px;padding:16px 18px;grid-column:1/-1}
+.dkcard .n{font:700 52px/1 var(--head);color:#fff}
+.dkcard .c{font:700 13px var(--body);color:#ddd;letter-spacing:.05em;text-transform:uppercase}
+.bar{height:9px;background:#444;border-radius:5px;margin-top:10px;overflow:hidden}.bar i{display:block;height:100%;background:var(--red);transition:width .3s}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:14px;height:3px;background:var(--line)}
+.tl .st{position:relative;padding:36px 14px 0 0}
+.tl .st::before{content:"";position:absolute;left:0;top:6px;width:19px;height:19px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 0 0 2px var(--red)}
+.tl .w{font:700 14px var(--head);color:var(--red);letter-spacing:.05em}
+.tl h4{font:700 17px var(--body);margin:3px 0 6px}
+.tl ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.tl li{font-size:14.5px;line-height:1.3;padding-left:12px;position:relative}
+.tl li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--red)}
+/* tiers */
+.tier{cursor:pointer;transition:transform .2s;position:relative}
+.tier:hover{transform:translateY(-3px)}
+.tier.sel{background:var(--black);color:#fff;border-left-color:var(--red)}
+.tier.sel p,.tier.sel .c{color:#eee}.tier.sel .n{color:#fff}
+.tier .rec{position:absolute;top:10px;right:12px}
+/* checklist */
+.chk{display:flex;gap:12px;align-items:flex-start;background:var(--gray-l);border-radius:8px;padding:12px 14px;cursor:pointer;border-left:5px solid var(--line);font-size:15px;line-height:1.3;user-select:none}
+.chk i{flex:0 0 22px;height:22px;border:2px solid var(--black);border-radius:4px;display:grid;place-items:center;font-style:normal;font-weight:700;color:#fff;font-size:15px;background:#fff}
+.chk.done{border-left-color:var(--red)}.chk.done i{background:var(--red);border-color:var(--red)}
+.chk b{display:block;font-size:15px}.chk span{color:var(--gray-d);font-size:14px}
+/* nav */
+#ui{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(17,17,17,.88);padding:6px 10px;border-radius:24px;z-index:20;transition:opacity .3s}
+#ui button{background:none;border:0;color:#fff;font:700 15px var(--body);cursor:pointer;padding:6px 11px;border-radius:14px}
+#ui button:hover,#ui button:focus-visible{background:var(--red);outline:none}
+#ui span{color:#ddd;font:700 13px var(--body);min-width:56px;text-align:center}
+#prog{position:fixed;left:0;top:0;height:3px;background:var(--red);z-index:20;transition:width .4s}
+#menu{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:30;display:none;padding:40px;overflow:auto}
+#menu.open{display:block}
+#menu h3{color:#fff;font:700 22px var(--head);letter-spacing:.08em;margin-bottom:18px}
+#menu .mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+#menu button{text-align:left;background:#1b1b1b;color:#fff;border:1px solid #333;border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;font:14px/1.3 var(--body);cursor:pointer}
+#menu button:hover{background:#2a2a2a}#menu button small{display:block;color:#aaa;font-size:12px;margin-bottom:3px}
+@media (prefers-reduced-motion:reduce){.slide,.slide.near,.fbar{transition:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="stage">
+
+<!-- 1 CAPA -->
+<section class="slide dark" data-t="Capa">
+ <div class="dk"><div class="k">Aroma das Ervas · Novembro de 2026</div>
+ <h1>Prospecção<br>B2B <em>ativa</em><br>em São Paulo</h1>
+ <p>Plano comercial para colocar a marca em empórios e mercados de alto padrão, com geração e qualificação de leads por IA-SDR.</p></div>
+ <div class="client">AROMA DAS ERVAS</div><div class="logo">V4 Carvalho &amp; Co</div>
+</section>
+
+<!-- 2 AGENDA -->
+<section class="slide light" data-t="Agenda">
+ <div class="hdr">Agenda</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>O que vamos percorrer</h2><p class="sub">Cinco blocos, do diagnóstico à decisão de começar.</p>
+ <div class="body"><div class="grid g2" style="gap:12px 28px">
+  <div class="blk"><div class="t">01 Contexto da marca</div><p>Onde a Aroma está hoje e qual é o gargalo comercial.</p></div>
+  <div class="blk"><div class="t">02 Mercado</div><p>Tamanho da categoria e concorrentes diretos.</p></div>
+  <div class="blk"><div class="t">03 Oportunidade B2B</div><p>Universo de lojas em São Paulo e o modelo IA-SDR.</p></div>
+  <div class="blk"><div class="t">04 Projeção</div><p>Benchmark real e simulador interativo.</p></div>
+  <div class="blk"><div class="t">05 Proposta</div><p>Plano de 90 dias, investimento modular e próximos passos.</p></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>A apresentação termina em uma decisão: aprovar um piloto de 90 dias com critérios claros para escalar.</p></div>
+</section>
+
+<!-- 3 DIV 01 -->
+<section class="slide dark sec" data-t="01 Contexto da marca"><div class="dk"><div class="big">01</div><h1>Contexto<br>da marca</h1></div><div class="logo">V4 Carvalho &amp; Co</div></section>
+
+<!-- 4 ONDE ESTÁ -->
+<section class="slide light" data-t="Onde a marca está hoje">
+ <div class="hdr">01 Contexto da marca</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Uma indústria de 25 anos, com base sólida e espaço para crescer</h2>
+ <p class="sub">Dados informados pela diretoria na reunião de 28 de outubro.</p>
+ <div class="body"><div class="grid g4">
+  <div class="card r"><div class="c">Faturamento</div><div class="n">R$ 1,3 a 1,4 mi</div><div class="h">por mês</div><p>Cerca de R$ 15 milhões por ano. Meta de 2027: crescer de 17% a 20%.</p></div>
+  <div class="card r"><div class="c">Carteira</div><div class="n">413</div><div class="h">clientes pessoa jurídica</div><p>Distribuídos em 12 estados, com redes como Oba e Shibata.</p></div>
+  <div class="card r"><div class="c">Portfólio</div><div class="n">130</div><div class="h">itens em sachê e frasco</div><p>O varejo expõe de 20 a 30 itens por loja. O foco comercial são as misturas.</p></div>
+  <div class="card r"><div class="c">Participação</div><div class="n">0,9%</div><div class="h">no estado de São Paulo</div><p>41% nos clientes já atendidos. 17º entre os 20 maiores do estado.</p></div>
+ </div><span class="tag">// FATO OBSERVADO</span></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>A marca já converte onde está presente. O limite do crescimento é a quantidade de lojas que a vendem.</p></div>
+</section>
+
+<!-- 5 GARGALO -->
+<section class="slide light" data-t="Gargalo comercial">
+ <div class="hdr">01 Contexto da marca</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>O gargalo é comercial, não de produto</h2>
+ <p class="sub">A estrutura de vendas depende de terceiros e não tem rotina de prospecção direta.</p>
+ <div class="body"><div class="grid g3">
+  <div class="blk"><div class="t">90% da carteira com representantes</div><span class="tag">// FATO OBSERVADO</span><p>15 representantes. O cliente passa a ser da carteira do representante, não da empresa.</p></div>
+  <div class="blk"><div class="t">Sem rotina de acompanhamento</div><span class="tag">// FATO OBSERVADO</span><p>Não há reunião periódica, treinamento padronizado nem processo comum de venda.</p></div>
+  <div class="blk"><div class="t">Venda no piloto automático</div><span class="tag">// FATO OBSERVADO</span><p>Redes com recompra recorrente ficam sem atenção. A Aroma perde espaço para outras linhas do mesmo representante.</p></div>
+  <div class="blk"><div class="t">Digital começou há pouco</div><span class="tag">// FATO OBSERVADO</span><p>Amazon desde março. Cerca de R$ 730 em anúncios geraram cerca de R$ 2.700 em vendas, retorno perto de 3,7 vezes.</p></div>
+  <div class="blk"><div class="t">Produto precisa estar disponível</div><span class="tag">// FATO OBSERVADO</span><p>Divulgar sem ponto de venda não converte. A direção quer presença física antes da comunidade e do e-commerce próprio.</p></div>
+  <div class="blk"><div class="t">Plano já em andamento</div><span class="tag">// FATO OBSERVADO</span><p>Contratar um comercial interno para prospecção direta e nomear representante para São Paulo.</p></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Falta um motor de geração de oportunidades que alimente o comercial interno. É o espaço da IA-SDR.</p></div>
+</section>
+
+<!-- 6 POSICIONAMENTO -->
+<section class="slide light" data-t="Posicionamento premium">
+ <div class="hdr">01 Contexto da marca</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Posicionamento acima da liderança, com preço ainda abaixo dos pares</h2>
+ <p class="sub">A marca atende as classes A e B e disputa com BR Spices e Bombay Herbs.</p>
+ <div class="body"><table>
+  <tr><th>Marca</th><th class="n">Preço médio por unidade</th><th>Leitura</th></tr>
+  <tr><td>BR Spices</td><td class="n">R$ 18,20</td><td>Par direto de perfil. Adquirida por grupo maior, com mais fôlego de negociação.</td></tr>
+  <tr><td>Bombay Herbs</td><td class="n">R$ 15,70</td><td>Par direto de perfil.</td></tr>
+  <tr class="hl"><td>Aroma das Ervas</td><td class="n">Abaixo dos dois</td><td>Espaço para capturar valor com embalagem, mix e comunicação.</td></tr>
+ </table>
+ <div class="grid g2"><div class="card neg"><div class="c">Ponto de atenção</div><p>Concorrentes já usam embalagem com fecho zip. A Aroma está em transição e a falta do fecho pode pesar na decisão de compra.</p></div>
+ <div class="card r"><div class="c">Ponto forte</div><p>Produção semimanual e ingredientes como o louro em folha inteira sustentam o discurso de qualidade e justificam o posicionamento.</p></div></div>
+ <span class="tag">// FATO OBSERVADO · informado pela diretoria</span></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O alvo comercial são lojas de alto padrão, onde o consumidor compara qualidade antes de preço.</p></div>
+</section>
+
+<!-- 7 DIV 02 -->
+<section class="slide dark sec" data-t="02 Mercado"><div class="dk"><div class="big">02</div><h1>Mercado</h1></div><div class="logo">V4 Carvalho &amp; Co</div></section>
+
+<!-- 8 MERCADO -->
+<section class="slide light" data-t="Tamanho do mercado">
+ <div class="hdr">02 Mercado</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Categoria estável e canal pulverizado</h2>
+ <p class="sub">O crescimento vem de capilaridade, e o canal de mercearias é o maior do país em pontos de venda.</p>
+ <div class="body"><div class="grid g4">
+  <div class="card r"><div class="c">Crescimento</div><div class="n">4,61%</div><div class="h">ao ano até 2028</div><p>Mercado de temperos e especiarias. Fonte: Kantar, via Sebrae-PR.</p></div>
+  <div class="card r"><div class="c">Empresas</div><div class="n">5.245</div><div class="h">ativas no setor</div><p>Mercado fragmentado, com marcas regionais e grandes grupos. Fonte: Sebrae-PR.</p></div>
+  <div class="card r"><div class="c">Canal</div><div class="n">416 mil</div><div class="h">mercearias no Brasil</div><p>Maior canal em número de pontos de venda. Fonte: Mercado &amp; Consumo, 2025.</p></div>
+  <div class="card r"><div class="c">Capital paulista</div><div class="n">13.648</div><div class="h">mercados e mercearias</div><p>11.251 minimercados e 2.397 supermercados. Fonte: IBGE, 2024.</p></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Não existe número público confiável do faturamento só de temperos. O dimensionamento correto é por lojas alcançáveis.</p></div>
+</section>
+
+<!-- 9 CONCORRENTES -->
+<section class="slide light" data-t="Concorrentes">
+ <div class="hdr">02 Mercado</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Quem disputa a gôndola e onde há espaço</h2>
+ <p class="sub">Os grandes dominam o consumo de massa. Os pares de perfil premium são o referencial da Aroma.</p>
+ <div class="body"><table>
+  <tr><th>Marca</th><th>Posição</th><th>Implicação</th></tr>
+  <tr><td>Sazón e Kitano</td><td>Líderes de massa. Sazón está em 64% dos lares.</td><td>Referência de volume. Disputa de gôndola em supermercados grandes.</td></tr>
+  <tr class="hl"><td>BR Spices e Bombay Herbs</td><td>Pares de perfil premium, com preço médio maior.</td><td>Concorrente direto nos empórios e mercados de alto padrão.</td></tr>
+  <tr><td>Cepêra</td><td>Cerca de 80 anos e 150 itens, varejo e foodservice.</td><td>Amplitude de linha parecida com a da Aroma.</td></tr>
+  <tr><td>Temperatta</td><td>Mais de R$ 30 milhões em 2025, forte em marca própria.</td><td>Mostra que o varejo regional compra de fornecedor médio.</td></tr>
+ </table></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>A Aroma ganha onde há venda assistida e relacionamento, canais em que grandes marcas têm pouca cobertura direta.</p></div>
+</section>
+
+<!-- 10 DIV 03 -->
+<section class="slide dark sec" data-t="03 Oportunidade B2B"><div class="dk"><div class="big">03</div><h1>Oportunidade<br>B2B</h1></div><div class="logo">V4 Carvalho &amp; Co</div></section>
+
+<!-- 11 UNIVERSO -->
+<section class="slide light" data-t="Universo de lojas">
+ <div class="hdr">03 Oportunidade B2B</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Milhares de lojas aderentes só na capital paulista</h2>
+ <p class="sub">Funil de universo, do total registrado ao perfil ideal de cliente.</p>
+ <div class="body"><div class="fun" id="uni">
+  <div class="frow"><div class="fbar" style="--w:100%;background:#111"><span>Mercados, mercearias e armazéns registrados</span><b>13.648</b></div><div class="rate">IBGE, 2024. Capital paulista.</div></div>
+  <div class="frow"><div class="fbar" style="--w:62%;background:#C00000"><span>Alto padrão e bairros A e B</span><b>1.365 a 2.730</b></div><div class="rate">Hipótese: de 10% a 20% do total.</div></div>
+  <div class="frow"><div class="fbar" style="--w:36%;background:#6B0000"><span>Com contato direto</span><b>mapear</b></div><div class="rate">Será medido na lista enriquecida.</div></div>
+ </div>
+ <div class="grid g3"><div class="blk"><div class="t">Empórios e delicatessens</div><p>Maior afinidade com marca premium.</p></div><div class="blk"><div class="t">Hortifrutis e mercados de bairro A e B</div><p>Alto giro, comprador recorrente.</p></div><div class="blk"><div class="t">Lojas naturais e açougues gourmet</div><p>Venda de mistura para carnes e peixes.</p></div></div>
+ <span class="tag">// HIPÓTESE · a Grande São Paulo e outros estados ampliam o universo</span></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O universo é grande o bastante para sustentar anos de prospecção sem esgotar a capital.</p></div>
+</section>
+
+<!-- 12 MIX -->
+<section class="slide light" data-t="Mix de entrada">
+ <div class="hdr">03 Oportunidade B2B</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Cada loja recebe um mix de entrada, não o catálogo inteiro</h2>
+ <p class="sub">Uma loja expõe de 20 a 30 dos 130 itens. A escolha do mix é parte da oferta.</p>
+ <div class="body"><div class="grid g3">
+  <div class="card r"><div class="n">1</div><div class="c">Dado de demanda</div><div class="h">A Amazon indica o que gira</div><p>Itens que vendem no e-commerce e têm pouca exposição no varejo, como a pimenta síria, entram como argumento de venda.</p></div>
+  <div class="card r"><div class="n">2</div><div class="c">Perfil da loja</div><div class="h">Mix por tipo de cliente</div><p>Empório, hortifruti e açougue gourmet recebem seleções diferentes, com foco em misturas.</p></div>
+  <div class="card r"><div class="n">3</div><div class="c">Formato</div><div class="h">Sachê como entrada</div><p>A direção reduz o mix de frasco e concentra o foco em sachê com fecho zip, à medida que a transição avança.</p></div>
+ </div><span class="tag">// HIPÓTESE · a composição final do kit será definida com a Aroma</span></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Oferta curta e específica por perfil reduz atrito na primeira compra e aumenta a chance de recompra.</p></div>
+</section>
+
+<!-- 13 MODELO -->
+<section class="slide light" data-t="Modelo IA-SDR">
+ <div class="hdr">03 Oportunidade B2B</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>A V4 gera e qualifica. O comercial da Aroma fecha</h2>
+ <p class="sub">A IA-SDR abastece o comercial interno que a direção já planeja contratar.</p>
+ <div class="body"><div class="grid g2" style="gap:16px">
+  <div class="card r"><div class="c">Responsabilidade V4</div><div class="h">Geração e qualificação de leads</div>
+   <p>1. Mapear e enriquecer a base de lojas.<br>2. Captar interesse com mídia e abordagem ativa.<br>3. IA-SDR conversa por WhatsApp e qualifica por perfil, volume e região.<br>4. Entrega a oportunidade pronta com histórico da conversa.<br>5. Relatório semanal de funil e custo.</p></div>
+  <div class="card"><div class="c">Responsabilidade Aroma</div><div class="h">Negociação, pedido e recompra</div>
+   <p>1. Responder a oportunidade em até um dia útil.<br>2. Apresentar o mix de entrada e fechar o pedido.<br>3. Faturar, entregar e acompanhar a loja.<br>4. Registrar o resultado para recalibrar a IA-SDR.<br>5. Treinar os representantes com o que funcionar.</p></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O cliente fica com a carteira. A carteira nasce dentro da empresa, não na mão do representante.</p></div>
+</section>
+
+<!-- 14 BENCHMARK -->
+<section class="slide light" data-t="Benchmark">
+ <div class="hdr">03 Oportunidade B2B</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Resultado real do mesmo modelo no primeiro mês</h2>
+ <p class="sub">Case de referência: marca que vende para revenda, com IA-SDR da V4 e fechamento pelo cliente.</p>
+ <div class="body"><div class="fun" id="bench">
+  <div class="frow"><div class="fbar" style="--w:100%;background:#111"><span>Investimento em mídia</span><b data-c="5386" data-p="R$ ">R$ 5.386</b></div><div class="rate">Custo por lead: R$ 19,87</div></div>
+  <div class="frow"><div class="fbar" style="--w:82%;background:#3a0a0a"><span>Leads gerados</span><b data-c="271">271</b></div><div class="rate">&nbsp;</div></div>
+  <div class="frow"><div class="fbar" style="--w:66%;background:#8a0000"><span>Leads qualificados</span><b data-c="183">183</b></div><div class="rate">67,5% dos leads</div></div>
+  <div class="frow"><div class="fbar" style="--w:56%;background:#a00000"><span>Leads trabalhados pelo comercial</span><b data-c="169">169</b></div><div class="rate">92,35% dos qualificados</div></div>
+  <div class="frow"><div class="fbar" style="--w:30%;background:#6B0000"><span>Vendas</span><b data-c="17">17</b></div><div class="rate">cerca de 10% de fechamento</div></div>
+ </div>
+ <div class="grid g4"><div class="card r"><div class="c">Faturamento</div><div class="n" data-c="87333" data-p="R$ ">R$ 87.333</div></div><div class="card r"><div class="c">Retorno (ROAS)</div><div class="n" data-c="16.21" data-d="2" data-s="x">16,21x</div></div><div class="card r"><div class="c">Custo por cliente (CAC)</div><div class="n" data-c="316.82" data-d="2" data-p="R$ ">R$ 316,82</div></div><div class="card r"><div class="c">Custo por qualificado</div><div class="n" data-c="29.43" data-d="2" data-p="R$ ">R$ 29,43</div></div></div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O funil se paga por volume qualificado. O ticket do produto define o retorno final, e é isso que simulamos a seguir.</p></div>
+</section>
+
+<!-- 15 DIV 04 -->
+<section class="slide dark sec" data-t="04 Projeção"><div class="dk"><div class="big">04</div><h1>Projeção</h1></div><div class="logo">V4 Carvalho &amp; Co</div></section>
+
+<!-- 16 SIMULADOR -->
+<section class="slide light" data-t="Simulador">
+ <div class="hdr">04 Projeção</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Simule o resultado do primeiro mês</h2>
+ <p class="sub">Ajuste as premissas. Os valores iniciais replicam o funil do case, com ticket da Aroma.</p>
+ <div class="body"><div class="sim">
+  <div class="ctrl">
+   <div class="presets"><button class="pill" data-p="c">Conservador</button><button class="pill sel" data-p="b">Base</button><button class="pill" data-p="o">Otimista</button></div>
+   <label>Investimento em mídia por mês <output id="o_inv"></output><input type="range" id="inv" min="3000" max="40000" step="1"></label>
+   <label>Custo por lead <output id="o_cpl"></output><input type="range" id="cpl" min="10" max="45" step="0.01"></label>
+   <label>Leads qualificados <output id="o_q"></output><input type="range" id="q" min="30" max="85" step="0.01"></label>
+   <label>Leads trabalhados pelo comercial <output id="o_c"></output><input type="range" id="c" min="60" max="100" step="0.01"></label>
+   <label>Taxa de fechamento <output id="o_cl"></output><input type="range" id="cl" min="3" max="15" step="0.01"></label>
+   <label>Ticket do primeiro pedido <output id="o_t"></output><input type="range" id="t" min="800" max="5000" step="50"></label>
+  </div>
+  <div class="out">
+   <div class="dkcard"><div class="c">Faturamento do primeiro pedido, por mês</div><div class="n" id="r_fat"></div><div class="bar"><i id="r_bar"></i></div><div class="c" style="margin-top:6px;color:#aaa">Retorno sobre mídia: <span id="r_roas" style="color:#fff"></span></div></div>
+   <div class="card r"><div class="c">Leads</div><div class="n" id="r_leads"></div></div>
+   <div class="card r"><div class="c">Vendas</div><div class="n" id="r_v"></div></div>
+   <div class="card r"><div class="c">Custo por cliente</div><div class="n" id="r_cac"></div></div>
+   <div class="card r"><div class="c">Lojas em 12 meses</div><div class="n" id="r_12"></div><p id="r_pct" style="font-size:13px"></p></div>
+  </div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O ticket do primeiro pedido é a variável de maior impacto. Recompra não está incluída e representa ganho adicional.</p></div>
+</section>
+
+<!-- 17 CENÁRIOS -->
+<section class="slide light" data-t="Cenários e escala">
+ <div class="hdr">04 Projeção</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Três níveis de investimento, três ritmos de expansão</h2>
+ <p class="sub">Cenário base: ticket de R$ 2.000 e taxas do case. Clique em um nível para ver o detalhe.</p>
+ <div class="body"><div class="presets" id="lv"><button class="pill sel" data-l="0">R$ 5,4 mil por mês</button><button class="pill" data-l="1">R$ 15 mil por mês</button><button class="pill" data-l="2">R$ 30 mil por mês</button></div>
+ <table>
+  <tr><th>Cenário</th><th class="n">Vendas por mês</th><th class="n">Faturamento</th><th class="n">Retorno</th></tr>
+  <tr><td>Conservador <span class="badge b-r">ticket R$ 1.500</span></td><td class="n" id="s_c1"></td><td class="n" id="s_c2"></td><td class="n" id="s_c3"></td></tr>
+  <tr class="hl"><td>Base <span class="badge b-n">ticket R$ 2.000</span></td><td class="n" id="s_b1"></td><td class="n" id="s_b2"></td><td class="n" id="s_b3"></td></tr>
+  <tr><td>Otimista <span class="badge b-g">ticket R$ 3.000</span></td><td class="n" id="s_o1"></td><td class="n" id="s_o2"></td><td class="n" id="s_o3"></td></tr>
+ </table>
+ <div class="grid g2"><div class="card r"><div class="c">Lojas novas em 12 meses (base)</div><div class="n" id="s_l"></div></div><div class="card" id="s_note"><div class="c">Leitura</div><p id="s_t"></p></div></div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Começar no nível menor valida ticket, fechamento e capacidade de atendimento antes de comprometer mais mídia.</p></div>
+</section>
+
+<!-- 18 RISCOS -->
+<section class="slide light" data-t="Riscos e premissas">
+ <div class="hdr">04 Projeção</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>O que pode mudar o resultado e como tratamos</h2>
+ <p class="sub">Quatro fatores concentram o risco da projeção.</p>
+ <div class="body"><div class="grid g2">
+  <div class="blk"><div class="t">Ticket do primeiro pedido</div><span class="tag">// HIPÓTESE</span><p>Os valores de R$ 1.500 a R$ 3.000 são estimativas. Serão substituídos pela tabela e pelo pedido mínimo da Aroma.</p></div>
+  <div class="blk"><div class="t">Capacidade de resposta</div><span class="tag">// HIPÓTESE</span><p>No cenário base são cerca de 17 oportunidades por mês. O comercial interno precisa responder em até um dia útil.</p></div>
+  <div class="blk"><div class="t">Conflito com representantes</div><span class="tag">// FATO OBSERVADO</span><p>Definir antes quem atende a loja captada e como os representantes participam. A carteira nova é da empresa.</p></div>
+  <div class="blk"><div class="t">Case de outro produto</div><span class="tag">// FATO OBSERVADO</span><p>O funil de referência vem de outro ticket. Serve de parâmetro e é recalibrado com os dados reais do primeiro mês.</p></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>As premissas são testáveis em 30 dias. O piloto existe para trocar hipótese por dado.</p></div>
+</section>
+
+<!-- 19 DIV 05 -->
+<section class="slide dark sec" data-t="05 Proposta"><div class="dk"><div class="big">05</div><h1>Proposta</h1></div><div class="logo">V4 Carvalho &amp; Co</div></section>
+
+<!-- 20 PLANO 90 -->
+<section class="slide light" data-t="Plano de 90 dias">
+ <div class="hdr">05 Proposta</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Piloto de 90 dias com decisão de escala no fim</h2>
+ <p class="sub">Quatro etapas, com entregas semanais e relatório de funil.</p>
+ <div class="body"><div class="tl">
+  <div class="st"><div class="w">SEMANAS 1 E 2</div><h4>Preparação</h4><ul><li>Lista de lojas enriquecida</li><li>Perfil ideal e mix de entrada</li><li>Scripts e fluxo da IA-SDR</li><li>Rastreamento e painel</li></ul></div>
+  <div class="st"><div class="w">SEMANA 3</div><h4>Lançamento</h4><ul><li>Primeiro lote de lojas</li><li>Mídia e abordagem ativa</li><li>Primeiras oportunidades ao comercial</li></ul></div>
+  <div class="st"><div class="w">SEMANAS 4 A 8</div><h4>Otimização</h4><ul><li>Ajuste semanal de mensagem e mix</li><li>Leitura de fechamento e ticket</li><li>Treino com representantes</li></ul></div>
+  <div class="st"><div class="w">SEMANAS 9 A 12</div><h4>Decisão</h4><ul><li>Balanço com dados reais</li><li>Revisão da projeção</li><li>Decisão de escala e de território</li></ul></div>
+ </div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Em 90 dias a Aroma terá uma carteira inicial nova e dados próprios para decidir quanto investir.</p></div>
+</section>
+
+<!-- 21 INVESTIMENTO -->
+<section class="slide light" data-t="Investimento modular">
+ <div class="hdr">05 Proposta</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>Investimento modular, no ritmo que a Aroma definir</h2>
+ <p class="sub">Clique em um nível de mídia mensal. O recomendado para iniciar é o piloto.</p>
+ <div class="body"><div class="grid g3" id="tiers">
+  <div class="card tier sel" data-k="0"><span class="badge b-g rec">Recomendado</span><div class="c">Piloto</div><div class="n">R$ 5,4 mil</div><div class="h">mídia por mês</div><p>Cerca de 17 vendas e R$ 34 mil por mês no cenário base.</p></div>
+  <div class="card tier" data-k="1"><div class="c">Tração</div><div class="n">R$ 15 mil</div><div class="h">mídia por mês</div><p>Cerca de 47 vendas e R$ 94 mil por mês no cenário base.</p></div>
+  <div class="card tier" data-k="2"><div class="c">Escala</div><div class="n">R$ 30 mil</div><div class="h">mídia por mês</div><p>Cerca de 94 vendas e R$ 187 mil por mês. Exige ampliar o território.</p></div>
+ </div>
+ <div class="grid g2"><div class="card r"><div class="c">Gatilho para subir de nível</div><p>Fechamento acima de 7% e custo por cliente abaixo de 30% do ticket, por dois meses seguidos.</p></div>
+ <div class="card"><div class="c">Honorários V4</div><p>IA-SDR, gestão, mídia e relatórios. Valores definidos na proposta comercial.</p></div></div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>O compromisso é modular e de médio prazo. A mídia sobe quando o dado autoriza, não antes.</p></div>
+</section>
+
+<!-- 22 CHECKLIST -->
+<section class="slide light" data-t="Próximos passos">
+ <div class="hdr">05 Proposta</div><div class="logo">V4 Carvalho &amp; Co</div>
+ <h2>O que precisamos para começar</h2>
+ <p class="sub">Marque o que já está disponível. Cada item destrava uma etapa do plano.</p>
+ <div class="body"><div class="grid g2" id="chk" style="gap:10px 16px">
+  <div class="chk" data-i="0"><i></i><div><b>Tabela de preços de atacado</b><span>e pedido mínimo por loja</span></div></div>
+  <div class="chk" data-i="1"><i></i><div><b>Regra com representantes</b><span>quem atende a loja captada</span></div></div>
+  <div class="chk" data-i="2"><i></i><div><b>Responsável comercial</b><span>pessoa e prazo de resposta</span></div></div>
+  <div class="chk" data-i="3"><i></i><div><b>Mix de entrada</b><span>itens por perfil de loja</span></div></div>
+  <div class="chk" data-i="4"><i></i><div><b>Dados da Amazon</b><span>itens que mais vendem</span></div></div>
+  <div class="chk" data-i="5"><i></i><div><b>Acesso ao Instagram</b><span>e alinhamento com a agência atual</span></div></div>
+  <div class="chk" data-i="6"><i></i><div><b>Logística em São Paulo</b><span>prazo e frete de entrega</span></div></div>
+  <div class="chk" data-i="7"><i></i><div><b>Material de venda</b><span>fotos, apresentação e kit</span></div></div>
+ </div><div class="cap" id="chkc"></div></div>
+ <div class="concl"><b>CONCLUSÃO ESTRATÉGICA</b><p>Com esses oito itens, o piloto entra no ar em cerca de três semanas.</p></div>
+</section>
+
+<!-- 23 ENCERRAMENTO -->
+<section class="slide dark" data-t="Encerramento">
+ <div class="dk"><div class="k">Próximo passo</div><h1>Aprovar o piloto<br>de <em>90 dias</em></h1>
+ <p>Começamos pela preparação e pela lista de lojas. Em três semanas a primeira oportunidade chega ao comercial da Aroma.</p></div>
+ <div class="client">AROMA DAS ERVAS</div><div class="logo">V4 Carvalho &amp; Co</div>
+</section>
+
+</div>
+
+<div id="ui"><button id="pv" aria-label="Slide anterior">&#9664;</button><span id="cnt"></span><button id="nx" aria-label="Próximo slide">&#9654;</button><button id="mn" aria-label="Índice">ÍNDICE</button><button id="fs" aria-label="Tela cheia">TELA CHEIA</button></div>
+<div id="menu"><h3>ÍNDICE</h3><div class="mg" id="mg"></div></div>
+
+<script>
+(function(){
+var st=document.getElementById('stage'),S=[].slice.call(st.querySelectorAll('.slide')),N=S.length,cur=0;
+var fmt=function(v,d){return v.toLocaleString('pt-BR',{minimumFractionDigits:d||0,maximumFractionDigits:d||0})};
+var brl=function(v,d){return 'R$ '+fmt(v,d)};
+function fit(){var s=Math.min(innerWidth/1280,innerHeight/720);st.style.transform='translate(-50%,-50%) scale('+s+')'}
+addEventListener('resize',fit);fit();
+S.forEach(function(s,i){s.style.setProperty('--i',i)});
+var mg=document.getElementById('mg');
+S.forEach(function(s,i){var b=document.createElement('button');b.innerHTML='<small>'+(i+1)+'</small>'+s.dataset.t;b.onclick=function(){go(i);menu(false)};mg.appendChild(b)});
+function menu(o){document.getElementById('menu').classList.toggle('open',o)}
+function count(el){var t=parseFloat(el.dataset.c),d=parseInt(el.dataset.d||0),p=el.dataset.p||'',s=el.dataset.s||'',t0=null;
+ function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/900);k=1-Math.pow(1-k,3);el.textContent=p+fmt(t*k,d)+s;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+function go(n,noHash){n=Math.max(0,Math.min(N-1,n));cur=n;st.style.setProperty('--cur',n);
+ S.forEach(function(s,i){s.classList.toggle('near',Math.abs(i-n)<=1);s.classList.toggle('on',i===n)});
+ document.getElementById('cnt').textContent=(n+1)+' / '+N;document.getElementById('prog').style.width=((n+1)/N*100)+'%';
+ S[n].querySelectorAll('[data-c]').forEach(count);
+ if(!noHash){try{history.replaceState(null,'','#s'+(n+1))}catch(e){}}}
+function hashN(){var m=/^#s(\d+)$/.exec(location.hash);return m?parseInt(m[1])-1:0}
+document.getElementById('pv').onclick=function(){go(cur-1)};
+document.getElementById('nx').onclick=function(){go(cur+1)};
+document.getElementById('mn').onclick=function(){menu(true)};
+document.getElementById('menu').onclick=function(e){if(e.target.id==='menu')menu(false)};
+document.getElementById('fs').onclick=function(){try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(function(){})}catch(e){}};
+addEventListener('keydown',function(e){if(e.target.tagName==='INPUT'&&(e.key.indexOf('Arrow')===0))return;
+ if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(cur+1)}
+ else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(cur-1)}
+ else if(e.key==='Home')go(0);else if(e.key==='End')go(N-1);
+ else if(e.key==='Escape')menu(false);else if(e.key.toLowerCase()==='m')menu(true);else if(e.key.toLowerCase()==='f')document.getElementById('fs').click()});
+var x0=null;addEventListener('pointerdown',function(e){if(e.target.closest('input,button,.tier,.chk,#menu'))return;x0=e.clientX});
+addEventListener('pointerup',function(e){if(x0===null)return;var d=e.clientX-x0;x0=null;if(Math.abs(d)>60)go(cur+(d<0?1:-1))});
+addEventListener('hashchange',function(){go(hashN(),true)});
+
+/* simulator */
+var P={c:{inv:5386,cpl:25.83,q:50,c:90,cl:7,t:1500},b:{inv:5386,cpl:19.87,q:67.53,c:92.35,cl:9.94,t:2000},o:{inv:5386,cpl:19.87,q:67.53,c:92.35,cl:9.94,t:3000}};
+var ids=['inv','cpl','q','c','cl','t'],el={};ids.forEach(function(k){el[k]=document.getElementById(k)});
+function calc(v){var leads=v.inv/v.cpl,qual=leads*v.q/100,tr=qual*v.c/100,vend=tr*v.cl/100;return{leads:leads,vend:vend,cac:vend?v.inv/vend:0,fat:vend*v.t}}
+function sim(){var v={};ids.forEach(function(k){v[k]=parseFloat(el[k].value)});var r=calc(v);
+ document.getElementById('o_inv').textContent=brl(v.inv);document.getElementById('o_cpl').textContent=brl(v.cpl,2);document.getElementById('o_q').textContent=fmt(v.q,1)+'%';document.getElementById('o_c').textContent=fmt(v.c,1)+'%';document.getElementById('o_cl').textContent=fmt(v.cl,1)+'%';document.getElementById('o_t').textContent=brl(v.t);
+ document.getElementById('r_fat').textContent=brl(r.fat);document.getElementById('r_roas').textContent=fmt(r.fat/v.inv,1)+'x';
+ document.getElementById('r_bar').style.width=Math.min(100,r.fat/v.inv/16.21*100)+'%';
+ document.getElementById('r_leads').textContent=fmt(r.leads);document.getElementById('r_v').textContent=fmt(r.vend,1);document.getElementById('r_cac').textContent=brl(r.cac);
+ var l12=r.vend*12;document.getElementById('r_12').textContent=fmt(l12);
+ document.getElementById('r_pct').textContent=fmt(l12/2730*100)+'% a '+fmt(Math.min(999,l12/1365*100))+'% do universo estimado'}
+function setP(k){var p=P[k];ids.forEach(function(i){el[i].value=p[i]});document.querySelectorAll('.presets [data-p]').forEach(function(b){b.classList.toggle('sel',b.dataset.p===k)});sim()}
+ids.forEach(function(k){el[k].addEventListener('input',function(){document.querySelectorAll('.presets [data-p]').forEach(function(b){b.classList.remove('sel')});sim()})});
+document.querySelectorAll('.presets [data-p]').forEach(function(b){b.onclick=function(){setP(b.dataset.p)}});setP('b');
+
+/* scenarios */
+var LV=[5386,15000,30000],TX=[
+ 'Valida o funil com pouco risco. Cerca de 200 lojas em 12 meses, de 7% a 15% do universo estimado.',
+ 'Acelera a carteira. Cerca de 560 lojas em 12 meses, de 21% a 41% do universo estimado.',
+ 'Ritmo máximo. Cerca de 1.100 lojas consomem mais de 40% do universo da capital e exigem ampliar para a Grande São Paulo.'];
+function lvl(i){var inv=LV[i];document.querySelectorAll('#lv .pill').forEach(function(b,j){b.classList.toggle('sel',j===i)});
+ [['c',P.c],['b',P.b],['o',P.o]].forEach(function(a){var v=Object.assign({},a[1],{inv:inv}),r=calc(v);
+  document.getElementById('s_'+a[0]+'1').textContent=fmt(r.vend,1);document.getElementById('s_'+a[0]+'2').textContent=brl(r.fat);document.getElementById('s_'+a[0]+'3').textContent=fmt(r.fat/inv,1)+'x'});
+ document.getElementById('s_l').textContent='~'+fmt(Math.round(calc(Object.assign({},P.b,{inv:inv})).vend*12/10)*10);document.getElementById('s_t').textContent=TX[i]}
+document.querySelectorAll('#lv .pill').forEach(function(b){b.onclick=function(){lvl(+b.dataset.l)}});lvl(0);
+
+/* tiers */
+document.querySelectorAll('#tiers .tier').forEach(function(t){t.onclick=function(){document.querySelectorAll('#tiers .tier').forEach(function(x){x.classList.toggle('sel',x===t)})}});
+
+/* checklist */
+var KEY='aroma-v4-chk',saved=[];try{saved=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+var ck=[].slice.call(document.querySelectorAll('#chk .chk'));
+function upd(){var n=ck.filter(function(c){return c.classList.contains('done')}).length;document.getElementById('chkc').textContent=n+' de '+ck.length+' itens confirmados';try{localStorage.setItem(KEY,JSON.stringify(ck.map(function(c,i){return c.classList.contains('done')?i:-1}).filter(function(i){return i>=0})))}catch(e){}}
+ck.forEach(function(c,i){if(saved.indexOf(i)>=0){c.classList.add('done');c.querySelector('i').textContent='✓'}
+ c.onclick=function(){var d=c.classList.toggle('done');c.querySelector('i').textContent=d?'✓':'';upd()}});
+var cc=document.getElementById('chkc');cc.textContent=saved.length+' de '+ck.length+' itens confirmados';
+var ht;function showUi(){var u=document.getElementById('ui');u.style.opacity=1;clearTimeout(ht);ht=setTimeout(function(){u.style.opacity=.0},2800)}
+addEventListener('mousemove',showUi);addEventListener('keydown',showUi);addEventListener('pointerdown',showUi);showUi();
+go(hashN(),true);
+})();
+</script>
+</body>
+</html>
