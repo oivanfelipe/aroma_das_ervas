@@ -159,6 +159,11 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
 #wipe.rev .wr{right:auto;left:0}
 @media (prefers-reduced-motion:reduce){.r,.ch,.fb,.sec .ghost{transition:none!important}}
 
+#cnt,#mn,#fs,#ct{display:none!important}
+#cn{gap:0}
+#cn button{border:0!important;font-size:13px;padding:4px 7px;opacity:.35;background:none!important}
+#cn button:hover,#cn button:focus-visible{opacity:1;color:inherit}
+
 .stat{padding:14px 18px}.stat .num{font-size:44px}
 .pbars{display:flex;flex-direction:column;gap:12px}
 .pb{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center;font-size:15px}
@@ -214,10 +219,8 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
 <!-- 1 CAPA -->
 <section class="slide dk cover" data-t="Capa" data-s="Aroma das Ervas">
  <canvas id="speed"></canvas>
- <div class="hero"><div class="kick r" style="--d:0;margin-bottom:22px">Plano comercial · Novembro de 2026</div>
-  <h1 class="split">Prospecção<br>B2B <em>ativa</em></h1>
-  <p class="r" style="--d:8">Como colocar a Aroma das Ervas em empórios e mercados de alto padrão de São Paulo, com tráfego pago e IA-SDR.</p></div>
- <div class="hint">Use as setas do teclado ou clique em avançar</div>
+ <div class="hero"><div class="kick r" style="--d:0;margin-bottom:22px">Novembro de 2026</div>
+  <h1 class="split">Aroma<br>das <em>Ervas</em></h1></div>
 </section>
 
 <!-- 2 AGENDA -->
@@ -283,7 +286,7 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
   <div>
    <div class="tr r" style="--d:2"><div class="k">TAM</div><div><div class="v">13.648 lojas · R$ 81,2 mi por ano</div><div class="d">Todos os mercados, mercearias, armazéns e supermercados registrados na capital (IBGE, 2024).</div></div></div>
    <div class="tr r" style="--d:3"><div class="k">SAM</div><div><div class="v">~2.050 lojas · R$ 12,2 mi por ano</div><div class="d">Empórios, delicatessens, hortifrutis e açougues de alto padrão: 15% do TAM, em faixa de 10% a 20% (R$ 8,1 a 16,2 mi).</div></div></div>
-   <div class="tr r" style="--d:4"><div class="k">SOM</div><div><div class="v">~93 lojas · R$ 0,33 mi no primeiro ano</div><div class="d">O que o piloto de R$ 5 mil em mídia por mês alcança em 12 meses: cerca de 4,5% do SAM.</div></div></div>
+   <div class="tr r" style="--d:4"><div class="k">SOM</div><div><div class="v">~144 lojas · R$ 0,51 mi no primeiro ano</div><div class="d">O que o piloto de R$ 5 mil em mídia por mês alcança em 12 meses: cerca de 7% do SAM.</div></div></div>
   </div></div>
  <p class="note r" style="--d:5">Cada loja vale R$ 5.950 por ano sem perdas: primeiro pedido de R$ 1.700 e recompra de R$ 850 a cada 60 dias. O SOM considera retenção de 97% ao mês. Valores por loja e o recorte do SAM são estimativas a validar com a Aroma.</p></div></div>
 </section>
@@ -307,11 +310,11 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
  <div class="c"><div class="kick r" style="--d:0">02 Oportunidade B2B</div><h2 class="t r" style="--d:1">Três pacotes, <em>um por perfil</em></h2>
  <p class="s r" style="--d:2">Cada loja expõe de 20 a 30 dos 130 itens. O pacote entrega a seleção pronta para o perfil.</p>
  <div class="main"><div class="grid g3">
-  <div class="card pk r" style="--d:3"><div class="it">Empório e delicatessen</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Assinatura</div><div class="tk">R$ 2.470</div><div class="lab">30 itens × 8 unidades × R$ 10,30</div><p>Misturas autorais, ervas e especiarias individuais, pimentas como a síria e chás.</p></div>
-  <div class="card pk r" style="--d:4"><div class="it">Hortifruti de bairro</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Giro</div><div class="tk">R$ 1.240</div><div class="lab">20 itens × 6 unidades × R$ 10,30</div><p>Alho e cebola, ervas desidratadas, misturas versáteis e sachês de reposição.</p></div>
-  <div class="card pk r" style="--d:5"><div class="it">Açougue gourmet</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Carnes</div><div class="tk">R$ 990</div><div class="lab">16 itens × 6 unidades × R$ 10,30</div><p>Sal de parrilha e temperos para carne bovina, suína, frango, cordeiro, peixes e frutos do mar.</p></div>
+  <div class="card pk r" style="--d:3"><div class="it">Empório e delicatessen</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Assinatura</div><div class="tk">~R$ 2.400</div><div class="lab">30 itens · valor aproximado</div><p>Misturas autorais, ervas e especiarias individuais, pimentas como a síria e chás.</p></div>
+  <div class="card pk r" style="--d:4"><div class="it">Hortifruti de bairro</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Giro</div><div class="tk">~R$ 1.300</div><div class="lab">20 itens · valor aproximado</div><p>Alho e cebola, ervas desidratadas, misturas versáteis e sachês de reposição.</p></div>
+  <div class="card pk r" style="--d:5"><div class="it">Açougue gourmet</div><div class="h" style="font:800 34px/1 var(--disp);text-transform:uppercase">Kit Carnes</div><div class="tk">~R$ 1.000</div><div class="lab">16 itens · valor aproximado</div><p>Sal de parrilha e temperos para carne bovina, suína, frango, cordeiro, peixes e frutos do mar.</p></div>
  </div>
- <p class="note r" style="--d:6">Cálculo: itens × unidades por item × preço médio por unidade da Aroma (R$ 10,30). As unidades por item são estimativas e o preço será trocado pela tabela de atacado. Com mix de 40% empórios, 40% hortifrutis e 20% açougues, o ticket médio é de cerca de R$ 1.700, valor usado na projeção.</p></div></div>
+ <p class="note r" style="--d:6">Valores aproximados de compra pelo lojista, calibrados para o ticket médio de cerca de R$ 1.700, com mix de 40% empórios, 40% hortifrutis e 20% açougues. Composição e valores finais serão definidos com a tabela de atacado da Aroma.</p></div></div>
 </section>
 
 <!-- 11 BENCHMARK -->
@@ -333,34 +336,34 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
 
 <!-- 13 PROJEÇÃO -->
 <section class="slide dk" data-t="Projeção do primeiro mês" data-s="03 Projeção">
- <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Piloto de R$ 5 mil em mídia gera cerca de <em>R$ 13 mil por mês</em></h2>
+ <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Piloto de R$ 5 mil em mídia gera cerca de <em>R$ 20 mil por mês</em></h2>
  <div class="main"><div class="two">
   <div><div class="fun">
-   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:100%;background:#3a0a0a;--d:0"><span>Leads</span><b data-c="125">125</b></div><div class="rate">CPL R$ 40</div></div>
-   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:68%;background:#7a0000;--d:1"><span>Qualificados</span><b data-c="84">84</b></div><div class="rate">67,5%</div></div>
-   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:62%;background:#A00000;--d:2"><span>Trabalhados</span><b data-c="78">78</b></div><div class="rate">92,35%</div></div>
-   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:40%;background:#C00000;--d:3"><span>Vendas</span><b data-c="7.7" data-d="1">7,7</b></div><div class="rate">9,94%</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:100%;background:#3a0a0a;--d:0"><span>Leads</span><b data-c="194">194</b></div><div class="rate">CPL R$ 25,83</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:68%;background:#7a0000;--d:1"><span>Qualificados</span><b data-c="131">131</b></div><div class="rate">67,5%</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:62%;background:#A00000;--d:2"><span>Trabalhados</span><b data-c="121">121</b></div><div class="rate">92,35%</div></div>
+   <div class="fr" style="grid-template-columns:1fr 110px"><div class="fb" style="--w:40%;background:#C00000;--d:3"><span>Vendas</span><b data-c="12" data-d="1">12,0</b></div><div class="rate">9,94%</div></div>
   </div>
-  <div class="grid g3" style="margin-top:14px"><div class="card stat r" style="--d:5"><div class="lab">Faturamento</div><div class="num rd" style="font-size:30px;white-space:nowrap">R$ 13,2 mil</div></div><div class="card stat r" style="--d:6"><div class="lab">Retorno</div><div class="num rd" style="font-size:30px">2,6x</div></div><div class="card stat r" style="--d:7"><div class="lab">Custo por cliente</div><div class="num rd" style="font-size:30px">R$ 645</div></div></div></div>
+  <div class="grid g3" style="margin-top:14px"><div class="card stat r" style="--d:5"><div class="lab">Faturamento</div><div class="num rd" style="font-size:30px;white-space:nowrap">R$ 20,4 mil</div></div><div class="card stat r" style="--d:6"><div class="lab">Retorno</div><div class="num rd" style="font-size:30px">4,1x</div></div><div class="card stat r" style="--d:7"><div class="lab">Custo por cliente</div><div class="num rd" style="font-size:30px">R$ 417</div></div></div></div>
   <div class="r" style="--d:4"><div class="lab" style="margin-bottom:10px">Premissas desta projeção</div>
    <div class="card" style="padding:6px 0 0"><table style="font-size:15px"><tr><th style="background:transparent;color:#aaa">Item</th><th class="n" style="background:transparent;color:#aaa">Valor</th></tr>
     <tr><td>Mídia por mês</td><td class="n">R$ 5.000</td></tr>
-    <tr><td>Custo por lead</td><td class="n">R$ 40</td></tr>
+    <tr><td>Custo por lead</td><td class="n">R$ 25,83</td></tr>
     <tr><td>Qualificação, contato e fechamento</td><td class="n">taxas do case</td></tr>
     <tr><td>Ticket do primeiro pedido</td><td class="n">R$ 1.700</td></tr></table></div>
-   <p class="note" style="margin-top:12px">O custo por lead de R$ 40 é cerca do dobro do case de referência, pelo público menor de lojistas de alto padrão. É uma premissa de trabalho, a ser revisada com dados da operação.</p></div>
+   <p class="note" style="margin-top:12px">O custo por lead de R$ 25,83 é 30% maior que o do case de referência, pelo público menor de lojistas de alto padrão. É uma premissa de trabalho, a ser revisada com dados da operação.</p></div>
  </div></div></div>
 </section>
 
 <!-- 14 RECOMPRA -->
 <section class="slide dk" data-t="Projeção de recompra" data-s="03 Projeção">
- <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Recompra leva o piloto a <em>R$ 41 mil por mês</em></h2>
+ <div class="c"><div class="kick r" style="--d:0">03 Projeção</div><h2 class="t r" style="--d:1">Recompra leva o piloto a <em>R$ 63 mil por mês</em></h2>
  <div class="main"><div class="two" style="grid-template-columns:1.5fr 1fr">
   <div class="r" style="--d:2"><div class="lg"><span><i style="background:#d9d9d9"></i>Primeiro pedido</span><span><i style="background:#C00000"></i>Recompra</span></div>
    <div class="chart" id="rc"></div><div class="xl" id="rx"></div>
-   <p class="note" style="margin-top:10px">Faturamento mensal em R$ mil, piloto de R$ 5 mil em mídia, 7,7 lojas novas por mês.</p></div>
+   <p class="note" style="margin-top:10px">Faturamento mensal em R$ mil, piloto de R$ 5 mil em mídia, 12 lojas novas por mês.</p></div>
   <div class="grid" style="gap:10px">
-   <div class="card r" style="--d:3"><div class="lab">Faturamento em 12 meses</div><div class="num rd" style="font-size:46px">R$ 330 mil</div><p>R$ 158 mil em primeiros pedidos e R$ 172 mil em recompra.</p></div>
+   <div class="card r" style="--d:3"><div class="lab">Faturamento em 12 meses</div><div class="num rd" style="font-size:46px">R$ 511 mil</div><p>R$ 245 mil em primeiros pedidos e R$ 266 mil em recompra.</p></div>
    <div class="card r" style="--d:4"><div class="lab">Peso da recompra</div><div class="num rd" style="font-size:46px" data-c="52" data-s="%">52%</div><p>Das vendas do primeiro ano, já com perda de lojas.</p></div>
 
   </div></div>
@@ -409,7 +412,7 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
    <div class="row"><div>IA-SDR, mensalidade<small>Inclui custos de disparos adicionais</small></div><b>R$ 1.990<small style="font:400 13px var(--txt)">por mês</small></b></div>
    <div class="tot">Mídia à parte, R$ 5 mil por mês no piloto.<br>Meses 1 a 3: R$ 9.980 por mês. A partir do mês 4: R$ 8.990 por mês.</div>
   </div></div>
- <div class="card r" style="--d:6"><div class="lab">Retorno projetado no primeiro ano</div><p style="font-size:18px;color:#fff">R$ 171 mil de investimento total, com a mídia do piloto, para R$ 330 mil de faturamento projetado: 1,9 vez. No 12º mês, o faturamento mensal projetado é de R$ 41 mil contra R$ 14 mil de custo mensal.</p></div></div></div>
+ <div class="card r" style="--d:6"><div class="lab">Retorno projetado no primeiro ano</div><p style="font-size:18px;color:#fff">R$ 171 mil de investimento total, com a mídia do piloto, para R$ 511 mil de faturamento projetado: 3,0 vezes. No 12º mês, o faturamento mensal projetado é de R$ 63 mil contra R$ 14 mil de custo mensal.</p></div></div></div>
 </section>
 
 <!-- 18 FECHAMENTO -->
@@ -417,7 +420,7 @@ input[type=range]:focus-visible{outline:2px solid #fff;outline-offset:6px}
  <canvas id="speed2"></canvas>
  <div class="hero"><div class="kick r" style="--d:0;margin-bottom:22px">Aroma das Ervas · V4 Carvalho &amp; Co</div>
   <h1 class="split"><em>V4</em>MOS<br>JUNTOS</h1>
-  <p class="r" style="--d:8">Para o kickoff: tabela de preços de atacado, regra com os representantes e um responsável comercial na Aroma.</p></div>
+</div>
 </section>
 
 <div id="chrome"><div id="cl"><b>V4</b> Carvalho &amp; Co</div><div id="cs"></div><div id="cc">Aroma das Ervas</div><div id="ct"></div>
@@ -475,7 +478,7 @@ function speedOn(n){cancelAnimationFrame(raf);var c=cvs.filter(function(c){retur
 
 
 /* recompra chart */
-(function(){var n=7.75,first=1700,re=850,sv=.97,box=$('rc'),xl=$('rx'),max=0,rows=[];
+(function(){var n=12.0,first=1700,re=850,sv=.97,box=$('rc'),xl=$('rx'),max=0,rows=[];
  for(var t=1;t<=12;t++){var r=0;for(var s=1;s<t;s++){if((t-s)%2===0)r+=n*Math.pow(sv,t-s)*re}rows.push([n*first,r]);max=Math.max(max,n*first+r)}
  rows.forEach(function(v,i){var c=document.createElement('div');c.className='col';c.style.setProperty('--i',i);c.style.setProperty('--ha',(v[0]/max*100*.88)+'%');c.style.setProperty('--hb',(v[1]/max*100*.88)+'%');
   c.innerHTML='<em>'+Math.round((v[0]+v[1])/1000)+'</em><div class="b"></div><div class="a"></div>';box.appendChild(c);var x=document.createElement('span');x.textContent='M'+(i+1);xl.appendChild(x)})})();
