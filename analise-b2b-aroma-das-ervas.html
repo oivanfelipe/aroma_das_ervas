@@ -1,0 +1,212 @@
+<title>Aroma das Ervas B2B</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: relatório em coluna única de leitura (max 760px), seções separadas por régua fina; tabelas e funil em blocos largos. */
+:root{
+  --bg:#F2F4F0; --surface:#FFFFFF; --ink:#16241C; --muted:#56655B; --line:#D5DCD3;
+  --green:#1F5A3A; --green-soft:#DCEBE1; --spice:#B7791F; --spice-soft:#F6E8CC; --warn:#A33A2A;
+  --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1913; --surface:#16251C; --ink:#E7EEE8; --muted:#9BAEA0; --line:#2A3C30;
+  --green:#6FC495; --green-soft:#1D3A2A; --spice:#E3AE55; --spice-soft:#3A2D14; --warn:#E5806F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1913; --surface:#16251C; --ink:#E7EEE8; --muted:#9BAEA0; --line:#2A3C30;
+  --green:#6FC495; --green-soft:#1D3A2A; --spice:#E3AE55; --spice-soft:#3A2D14; --warn:#E5806F; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);
+  padding-block:48px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,52px);font-weight:700;letter-spacing:-.02em}
+h2{font-size:28px;font-weight:700;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+.eyebrow{font:500 12px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--spice)}
+.lede{font-size:20px;color:var(--muted);max-width:60ch}
+section{display:flex;flex-direction:column;gap:20px;border-top:1px solid var(--line);padding-top:28px}
+header{display:flex;flex-direction:column;gap:16px}
+.meta{font:400 13px var(--f-mono);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.box b{font-family:var(--f-display);font-size:30px;line-height:1;color:var(--green)}
+.box span{color:var(--muted);font-size:15px}
+.num{font-variant-numeric:tabular-nums}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.note{background:var(--spice-soft);border-radius:6px;padding:14px 16px;font-size:16px}
+.src{font-size:13px;color:var(--muted)}
+.src a{color:var(--muted)}
+a{color:var(--green)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;font-size:14px}
+.funnel{display:flex;flex-direction:column;gap:6px}
+.step{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--green-soft);border-radius:4px;padding:10px 14px}
+.step small{display:block;color:var(--muted);font-size:13px}
+.step strong{font:500 17px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--green)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.split .box{gap:10px}
+.tag{font:500 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--spice)}
+.bars{display:flex;flex-direction:column;gap:14px}
+.row{display:grid;grid-template-columns:110px minmax(0,1fr) 92px;gap:12px;align-items:center;font-size:14px}
+.bar{height:20px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green)}
+.bar i.c{background:var(--spice)}
+.row .v{font:500 14px var(--f-mono);text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:520px){.row{grid-template-columns:80px minmax(0,1fr) 76px}h2{font-size:24px}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Análise inicial · Frente B2B</div>
+  <h1>Aroma das Ervas: prospecção de empórios e mercados em São Paulo</h1>
+  <p class="lede">Diagnóstico da marca, leitura de mercado e uma projeção de geração de pedidos para pequeno e médio varejo, baseada em um case de referência que operamos com o mesmo modelo.</p>
+  <div class="meta">Novembro de 2026 · Escopo: município de São Paulo · Documento de trabalho</div>
+</header>
+
+<section>
+  <h2>Resumo</h2>
+  <div class="grid">
+    <div class="box"><b class="num">13.648</b><span>mercados, mercearias e armazéns registrados na capital (IBGE, 2024)</span></div>
+    <div class="box"><b class="num">~1,4 a 2,7 mil</b><span>estimativa de lojas de alto padrão dentro do perfil ideal (hipótese: 10 a 20%)</span></div>
+    <div class="box"><b class="num">17 pedidos</b><span>fechados pelo case de referência no 1º mês, com R$ 5,4 mil investidos</span></div>
+    <div class="box"><b class="num">R$ 34 mil</b><span>faturamento projetado no 1º mês, cenário base, mesmo investimento</span></div>
+  </div>
+  <p>A Aroma das Ervas já vende no varejo por supermercados, hortifrutis e distribuidores, e tem tração na Amazon. Falta um canal ativo e previsível para chegar a empórios e mercados de bairro. Propomos um sistema em que a nossa <strong>IA-SDR</strong> gera e qualifica os contatos e o time comercial da marca cuida da negociação, do pedido e da recompra.</p>
+</section>
+
+<section>
+  <h2>1. A marca hoje</h2>
+  <div class="split">
+    <div class="box">
+      <h3>O que o site mostra</h3>
+      <ul>
+        <li>Temperos e especiarias desde 2000, com sede em Campinas (SP).</li>
+        <li>Catálogo grande, com cerca de 100 itens em 7 páginas: temperos clássicos, fitness (sem sal), regionais, misturas crocantes, ervas, pimentas, desidratados e chás.</li>
+        <li>Formatos em frasco e sachê. Navegação por ocasião de uso (churrasco, aves, massas, petiscos).</li>
+        <li>Promessa: praticidade e sabor para quem cozinha em casa e para profissionais de alimentação.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>O que falta para vender B2B</h3>
+      <ul>
+        <li>Nenhuma página de atacado ou revenda, nem pedido mínimo ou tabela. A carteira de 413 clientes vem quase toda dos representantes.</li>
+        <li>Distribuidores e representantes citados, mas sem nomes ou contatos.</li>
+        <li>Sem prova social: depoimentos, logos de clientes ou números.</li>
+        <li>Preços não aparecem no site. Formulário de contato é genérico.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><strong>Pendente:</strong> não foi possível abrir o Instagram (@aromadaservas) nem a loja da Amazon nesta rodada. A leitura de presença social, preços e avaliações entra assim que tivermos prints ou acesso.</div>
+  <p><strong>Leitura de posicionamento.</strong> Segundo a diretoria, a Aroma se posiciona acima da liderança de mercado e atende as classes A e B. Os pares diretos são BR Spices (preço médio de R$ 18,20 por unidade) e Bombay Herbs (R$ 15,70), e o preço da Aroma está abaixo dos dois. O alvo B2B são empórios, delicatessens, hortifrutis e mercados de bairros de alto padrão, além de lojas de produtos naturais e açougues gourmet. Hoje 90% da carteira (413 clientes em 12 estados) está com 15 representantes, e a diretoria planeja um comercial interno para prospecção direta, que é o papel que a IA-SDR alimenta.</p>
+</section>
+
+<section>
+  <h2>2. Mercado</h2>
+  <div class="grid">
+    <div class="box"><b class="num">4,61%</b><span>crescimento anual do mercado de temperos e especiarias até 2028 (Kantar, via Sebrae-PR)</span></div>
+    <div class="box"><b class="num">5.245</b><span>empresas ativas no setor (Sebrae-PR)</span></div>
+    <div class="box"><b class="num">~416 mil</b><span>mercearias no Brasil, o maior canal em número de pontos de venda (Mercado &amp; Consumo, 2025)</span></div>
+  </div>
+  <p>Não existe um número público confiável de faturamento só do segmento de temperos. O que dá para afirmar é que a categoria cresce de forma estável, o canal de mercearias e mercados de bairro é o mais capilar do país e as marcas grandes concentram a gôndola dos supermercados.</p>
+  <h3>Concorrentes que a loja pequena já compra</h3>
+  <div class="tw"><table>
+    <tr><th>Marca</th><th>Posição</th><th>Implicação para a Aroma</th></tr>
+    <tr><td>Sazón (Ajinomoto)</td><td>Presente em 64% dos lares, linhas sem sal e naturais</td><td>Referência de massa. Disputa o espaço no varejo e a confiança do consumidor.</td></tr>
+    <tr><td>Kitano (General Mills)</td><td>Mais de 60 anos em ervas e especiarias, discurso de ingredientes de verdade</td><td>Principal referência em especiarias. Mostra o que o lojista já espera de preço e giro.</td></tr>
+    <tr><td>BR Spices e Bombay Herbs</td><td>Pares de perfil premium, com preço médio por unidade de R$ 18,20 e R$ 15,70 (informado pela diretoria)</td><td>Concorrentes diretos nos empórios e mercados de alto padrão.</td></tr>
+    <tr><td>Cepêra</td><td>Cerca de 80 anos, uns 150 itens, atende varejo e food service</td><td>Perfil mais próximo em amplitude de linha e em foco no profissional.</td></tr>
+    <tr><td>Temperatta</td><td>Faturou mais de R$ 30 mi em 2025, forte em marca própria de redes</td><td>Mostra que o varejo regional compra temperos de fornecedor médio.</td></tr>
+    <tr><td>Heinz, Quero, Hemmer</td><td>Grupo Kraft Heinz</td><td>Grande porte. Não precisa ser enfrentado de frente nesse canal.</td></tr>
+  </table></div>
+  <p class="src">Fontes: <a href="https://sebraepr.com.br/impulsiona/mercado-de-temperos-tradicao-inovacao-e-saude/">Sebrae-PR</a>, <a href="https://mercadoeconsumo.com.br/23/06/2025/noticias-varejo/mercearias-e-mercados-de-bairro-respondem-por-33-do-total-de-pontos-de-venda-no-brasil/">Mercado &amp; Consumo</a>, <a href="https://gironews.com/informacoes-de-fornecedores/temperatta-cresce-em-2025-e-projeta-expansao-nacional-em-2026/">Giro News (Temperatta)</a>, <a href="https://www.ajinomoto.com.br/app/uploads/2024/09/SAZON®-lanca-linha-de-temperos-naturais.pdf">Ajinomoto</a>, <a href="https://marcaspelomundo.com.br/anunciantes/cepera-adota-conceito-vai-com-tudo-e-renova-posicionamento-para-celebrar-80-anos/">Marcas pelo Mundo (Cepêra)</a>.</p>
+  <p><strong>Espaço para a Aroma.</strong> As grandes marcas dominam o consumo de massa, mas dependem de distribuidor e promotor para chegar na loja pequena. Um fornecedor com contato direto, resposta rápida no WhatsApp e linha enxuta por perfil de loja encontra espaço onde a cobertura dos grandes é fraca.</p>
+</section>
+
+<section>
+  <h2>3. Universo de lojas em São Paulo</h2>
+  <div class="tw"><table>
+    <tr><th>Camada</th><th class="n">Lojas</th><th>Base</th></tr>
+    <tr><td>Minimercados, mercearias e armazéns (capital)</td><td class="n">11.251</td><td>IBGE, Cadastro Central de Empresas, 2024</td></tr>
+    <tr><td>Supermercados e hipermercados (capital)</td><td class="n">2.397</td><td>IBGE, Cadastro Central de Empresas, 2024</td></tr>
+    <tr><td><strong>Total registrado</strong></td><td class="n"><strong>13.648</strong></td><td>Unidades locais cadastradas</td></tr>
+    <tr><td>Dentro do perfil ideal (10 a 20%)</td><td class="n">1.365 a 2.730</td><td>Hipótese nossa: empórios e mercados de alto padrão, ativos e contatáveis por WhatsApp</td></tr>
+  </table></div>
+  <div class="note">O cadastro do IBGE não separa empórios, hortifrutis e casas de produtos naturais, e não inclui a Grande São Paulo. Ambos são ampliação do universo, ainda não medida. O recorte de 10 a 20% será validado com uma lista real enriquecida (CNPJ, telefone, porte) antes de qualquer investimento.</div>
+</section>
+
+<section>
+  <h2>4. Como funciona o modelo</h2>
+  <div class="split">
+    <div class="box"><span class="tag">Nosso lado</span><h3>Geração e qualificação</h3>
+      <ul><li>Mapeamento e enriquecimento da lista de lojas.</li><li>Captação e abordagem ativa por mídia e WhatsApp.</li><li>IA-SDR conversa, qualifica por perfil e volume e agenda o contato comercial.</li></ul></div>
+    <div class="box"><span class="tag">Lado da Aroma</span><h3>Venda e recompra</h3>
+      <ul><li>Negociação, condições comerciais e fechamento do pedido.</li><li>Logística, faturamento e entrega.</li><li>Recompra e relacionamento com a loja.</li></ul></div>
+  </div>
+  <h3>Case de referência: primeiro mês no ar</h3>
+  <p>Uma marca de consumo que vende para revenda, operada com o mesmo desenho: IA-SDR do nosso lado, fechamento no time do cliente.</p>
+  <div class="funnel">
+    <div class="step"><div>Investimento em mídia<small>CPL de R$ 19,87</small></div><strong>R$ 5.386</strong></div>
+    <div class="step"><div>Leads gerados</div><strong>271</strong></div>
+    <div class="step"><div>Leads qualificados<small>67,5% dos leads · R$ 29,43 por qualificado</small></div><strong>183</strong></div>
+    <div class="step"><div>Leads trabalhados pelo comercial<small>92,35% dos qualificados · R$ 31,87 por lead</small></div><strong>169</strong></div>
+    <div class="step"><div>Vendas fechadas<small>cerca de 10% · CAC de R$ 316,82</small></div><strong>17</strong></div>
+    <div class="step"><div>Faturamento<small>ROAS de 16,21</small></div><strong>R$ 87.333</strong></div>
+  </div>
+</section>
+
+<section>
+  <h2>5. Projeção para a Aroma das Ervas</h2>
+  <p>Aplicamos as taxas do funil de referência e trocamos o ticket médio, porque temperos têm pedido inicial bem menor. Os números abaixo são <strong>primeiro pedido apenas</strong>, sem recompra.</p>
+  <div class="tw"><table>
+    <tr><th>Cenário</th><th>Premissas</th><th class="n">Vendas / mês</th><th class="n">CAC</th><th class="n">Faturamento</th><th class="n">ROAS</th></tr>
+    <tr><td>Conservador</td><td>CPL 30% maior, 50% qualificados, fechamento 7%, ticket R$ 1.500</td><td class="n">6,6</td><td class="n">R$ 820</td><td class="n">R$ 9,9 mil</td><td class="n">1,8x</td></tr>
+    <tr><td><strong>Base</strong></td><td>Taxas do case, ticket R$ 2.000</td><td class="n">16,8</td><td class="n">R$ 321</td><td class="n"><strong>R$ 33,6 mil</strong></td><td class="n"><strong>6,2x</strong></td></tr>
+    <tr><td>Otimista</td><td>Taxas do case, ticket R$ 3.000</td><td class="n">16,8</td><td class="n">R$ 321</td><td class="n">R$ 50,4 mil</td><td class="n">9,4x</td></tr>
+  </table></div>
+  <p class="src">Base de cálculo: investimento de R$ 5.386 por mês, igual ao case. Os tickets são hipóteses até recebermos preços e pedido mínimo da marca.</p>
+
+  <h3>O que acontece ao escalar o investimento</h3>
+  <div class="bars" role="img" aria-label="Faturamento mensal projetado por nível de investimento, cenário base e conservador">
+    <div class="row"><span>R$ 5,4 mil</span><div class="bar"><i style="width:18%"></i></div><span class="v">R$ 34 mil</span></div>
+    <div class="row"><span>R$ 15 mil</span><div class="bar"><i style="width:50%"></i></div><span class="v">R$ 94 mil</span></div>
+    <div class="row"><span>R$ 30 mil</span><div class="bar"><i style="width:100%"></i></div><span class="v">R$ 187 mil</span></div>
+  </div>
+  <p class="src">Cenário base (ticket R$ 2.000, ROAS 6,2x), faturamento mensal do primeiro pedido. No cenário conservador os mesmos níveis geram R$ 10 mil, R$ 27 mil e R$ 55 mil.</p>
+
+  <div class="tw"><table>
+    <tr><th>Investimento / mês</th><th class="n">Lojas novas / mês</th><th class="n">Lojas em 12 meses</th><th class="n">Parte do universo</th></tr>
+    <tr><td>R$ 5,4 mil</td><td class="n">17</td><td class="n">~200</td><td class="n">7 a 15%</td></tr>
+    <tr><td>R$ 15 mil</td><td class="n">47</td><td class="n">~560</td><td class="n">21 a 41%</td></tr>
+    <tr><td>R$ 30 mil</td><td class="n">94</td><td class="n">~1.120</td><td class="n">41 a 82%</td></tr>
+  </table></div>
+  <p>O investimento de R$ 30 mil já exige ampliar o território para a Grande São Paulo, porque consumiria mais de 40% do universo da capital em um ano. O ponto de partida mais sensato é o primeiro nível, para validar ticket, taxa de fechamento e capacidade de atendimento antes de escalar.</p>
+</section>
+
+<section>
+  <h2>6. Riscos e o que precisamos da marca</h2>
+  <div class="grid">
+    <div class="box"><h3>Ticket e margem</h3><span>Preço de atacado, pedido mínimo e frete definem o ROAS real. É a variável de maior impacto na projeção.</span></div>
+    <div class="box"><h3>Conflito com representantes</h3><span>Os 15 representantes detêm 90% da carteira. Precisamos definir quem atende a loja captada e como eles participam.</span></div>
+    <div class="box"><h3>Capacidade comercial</h3><span>No cenário base são cerca de 17 pedidos novos por mês. O time da marca precisa responder em horas, não dias.</span></div>
+    <div class="box"><h3>Comparação com o case</h3><span>O funil de referência vem de outro produto e ticket. Servem como parâmetro, e serão substituídos por dados reais após o primeiro mês.</span></div>
+  </div>
+  <h3>Próximos passos</h3>
+  <ul>
+    <li>Receber tabela de preços, pedido mínimo, margem e prazo de entrega.</li>
+    <li>Acessar Instagram e loja Amazon (números de vendas, avaliações e produtos mais vendidos) para fechar o diagnóstico.</li>
+    <li>Montar a lista real de lojas da capital e medir quantas cabem no perfil ideal.</li>
+    <li>Definir regra com os representantes e a oferta de entrada (mix de 20 a 30 itens por tipo de loja).</li>
+    <li>Rodar o primeiro mês em teste e recalibrar a projeção com os dados da marca.</li>
+  </ul>
+  <p class="src">Fontes de universo: <a href="https://apas.com.br/quem-somos/">APAS</a> (estado) e IBGE, Cadastro Central de Empresas, unidades locais do município de São Paulo, 2024, conforme consulta de pesquisa. As projeções são estimativas, não garantia de resultado.</p>
+</section>
+</div>
